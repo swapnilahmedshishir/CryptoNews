@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import { IoChevronDownOutline } from "react-icons/io5";
+import { IoChevronDownOutline , IoReorderThreeOutline } from "react-icons/io5";
 import { useState } from "react";
 import { GoSearch } from "react-icons/go";
-import { IoReorderThreeOutline } from "react-icons/io5";
+import { FaXmark } from "react-icons/fa6";
 
 const Navbars = () => {
   // const [clicked, setClicked] = useState(false);
@@ -26,8 +26,8 @@ const Navbars = () => {
           </Link>
         </span>
       </div>
-      <div className="border-gray-100 border-solid border-2">
-        <div className="flex justify-between md:justify-normal items-center mx-3">
+      <div className="border-gray-100 border-solid border-b-2">
+        <div className="flex justify-between md:justify-normal lg:justify-between  items-center mx-3">
           {/* colpace button */}
           <div className="block lg:hidden relative">
             <ul className="flex basis-auto uppercase gap-3">
@@ -43,24 +43,28 @@ const Navbars = () => {
                 </button>
 
                 <div className={`${isOpen ? "hidden" : "block"}`}>
-                  <div className="absolute md:rounded-lg md:shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 w-96 xs:w-96 p-2">
+                  <div className="absolute md:rounded-lg md:shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 w-80 md:w-96 p-2 -top-4 -left-2 ">
                     <div className="pt-4 pb-6 px-4 text-xs">
                       <div className="flex items-center justify-between">
-                        <div className="">
-            <NavLink to="/home" className="">
-              <img className="h-36" src="/original.png" alt="logo" />
-            </NavLink>
-          </div>
+                        <div>
+                          <NavLink to="/home" className="">
+                            <img
+                              className="h-7"
+                              src="/original.png"
+                              alt="logo"
+                            />
+                          </NavLink>
+                        </div>
                         <button
-                  className="text-black group rounded-md inline-flex items-center font-medium hover:text-gray-900 outline-none focus:outline-[#5637CD]"
-                  type="button"
-                  aria-expanded="false"
-                  data-headlessui-state=""
-                  id="headlessui-popover-button-:r2:"
-                >
-                  <IoReorderThreeOutline className="text-3xl mx-2 my-1" />
-                </button>
-                        
+                          // className="text-black group rounded-md inline-flex items-center font-medium hover:text-gray-900 outline-[#5637CD] "
+                          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                          type="button"
+                          aria-expanded="false"
+                          data-headlessui-state=""
+                          id="headlessui-popover-button-:r2:"
+                        >
+                          <FaXmark  className="text-3xl mx-2 my-1" />
+                        </button>
                       </div>
                       <div className="mt-6 px-1">
                         <nav className="grid grid-cols-2 gap-y-4 gap-x-8 md:gap-x-8">
@@ -326,12 +330,13 @@ const Navbars = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div className="pr-28 lg:pr-1">
             <NavLink to="/home" className="">
               <img className="h-36" src="/original.png" alt="logo" />
             </NavLink>
           </div>
           <div className="flex">
+            <div className="hidden md:block">
             <ul className="flex basis-auto  uppercase">
               <li className=" mx-2">
                 <NavLink to="/home" className="">
@@ -355,6 +360,7 @@ const Navbars = () => {
               </li>
               <li></li>
             </ul>
+            </div>
             <div>
               <NavLink
                 to="/search"
