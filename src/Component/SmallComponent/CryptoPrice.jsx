@@ -9,8 +9,9 @@ const CryptoPrice = (props) => {
 
   useEffect(() => {
     // const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}usdt@trade`);
-    const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@aggTrade`);
-
+    // const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@aggTrade`);
+    const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@kline_1d`);
+    
 //     wss://fstream.binance.com/ws/bnbusdt@aggTrade
 // wss://fstream.binance.com/stream?streams=bnbusdt@aggTrade/btcusdt@markPrice
 
@@ -41,9 +42,9 @@ const CryptoPrice = (props) => {
   return (
     <>
       {price ? (
-        <span className={`text-xl ${getPriceStyle()}`}>{symbol} ${price} <CryptoPriceRate symbol={symbol} /></span>
+        <span className={`text-xs ${getPriceStyle()}`}>{symbol} ${price} <CryptoPriceRate symbol={symbol} /></span>
       ) : (
-        <p className="text-xl">Loading...</p>
+        <p className="text-xs">Loading...</p>
       )}
     </>
   );

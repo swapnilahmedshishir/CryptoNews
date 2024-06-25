@@ -8,11 +8,7 @@ const HeaderScroll = () => {
   const clonedListRef = useRef(null);
 
   const symbols = [
-    'BTC', 'ETH', 'BNB', 'ADA', 'XRP', 'SOL', 'DOT', 'DOGE', 'AVAX', 'LUNA',
-    'SHIB', 'MATIC', 'UNI', 'LTC', 'LINK', 'ALGO', 'BCH', 'VET', 'AXS', 'FTT',
-    'ATOM', 'FIL', 'XLM', 'TRX', 'XMR', 'EOS', 'AAVE', 'XTZ', 'CAKE', 'THETA',
-    'MKR', 'SUSHI', 'NEO', 'KSM', 'ZIL', 'ENJ', 'BAT', 'CHZ', 'DASH', 'ZEC'
-  ];
+    'BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'DOT', 'AVAX','UNI','ATOM', 'MKR','ARB','OP','AAVE', 'COMP', 'S&P', 'GOLD', 'OIL' ];
 
   useEffect(() => {
     const $tickerWrapper = tickerWrapperRef.current;

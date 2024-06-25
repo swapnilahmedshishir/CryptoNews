@@ -5,12 +5,12 @@ const CryptoPrice = ({ symbol }) => {
   const [lastRate, setLastRate] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@kline_5m`);
+    const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@kline_1d`);
 
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data);
-      const { k: { q } } = message;
-      const newRate = parseFloat(q).toFixed(3);
+      const { k: { p } } = message;
+      const newRate = parseFloat(p).toFixed(3);
 
       // Only update if newRate is a valid number
       if (!isNaN(newRate)) {
@@ -37,7 +37,7 @@ const CryptoPrice = ({ symbol }) => {
   return (
     <>
       {rate !== null && (
-        <span className="text-xl" >{rate}</span>
+        <span className="text-xs" >{rate}%</span>
       )}
     </>
   );
