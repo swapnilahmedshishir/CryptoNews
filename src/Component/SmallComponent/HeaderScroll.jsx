@@ -8,14 +8,14 @@ const HeaderScroll = () => {
   const clonedListRef = useRef(null);
 
   const symbols = [
-    'BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'DOT', 'AVAX','UNI','ATOM', 'MKR','ARB','OP','AAVE', 'COMP', 'S&P', 'GOLD', 'OIL' ];
+    'BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'DOT', 'AVAX','UNI','ATOM', 'MKR','ARB','OP','AAVE', 'COMP'];
 
   useEffect(() => {
     const $tickerWrapper = tickerWrapperRef.current;
     const $list = listRef.current;
     const $clonedList = clonedListRef.current;
 
-    let listWidth = 0;
+    let listWidth = 10;
     const listItems = $list.querySelectorAll('li');
 
     listItems.forEach(item => {
@@ -31,7 +31,7 @@ const HeaderScroll = () => {
     $clonedList.classList.add('cloned');
 
     const infinite = new TimelineMax({ repeat: -1, paused: true });
-    const time = 35;
+    const time = 10;
 
     infinite
       .fromTo($list, time, { x: 0 }, { x: -listWidth, ease: Linear.easeNone }, 0)
@@ -53,17 +53,17 @@ const HeaderScroll = () => {
   }, []);
 
   return (
-    <div className="relative top-1 left-0 border-gray-100 border-solid border-b-2 bg-white w-full h-12 overflow-hidden cursor-pointer" ref={tickerWrapperRef}>
+    <div className="relative top-1 left-0 border-gray-100 border-solid border-b-2 bg-white w-ful overflow-hidden cursor-pointer" ref={tickerWrapperRef}>
       <ul className="relative inline-block list-none p-0 m-0 w-full" ref={listRef}>
         {symbols.map((symbol, index) => (
-          <li className="float-left pl-4" key={index+ symbols.length}>
+          <li className="float-left pl-5" key={index+ symbols.length}>
             <CryptoPrice symbol={symbol} />
           </li>
         ))}
       </ul>
       <ul className="absolute top-0 left-0 inline-block list-none p-0 m-0 w-full" ref={clonedListRef}>
         {symbols.map((symbol, index) => (
-          <li className="float-left pl-4" key={index + symbols.length}>
+          <li className="float-left pl-5" key={index + symbols.length}>
             <CryptoPrice symbol={symbol} />
           </li>
         ))}

@@ -62,8 +62,8 @@ const Section4 = () => {
                   decoding="async"
                   data-nimg="1"
                   className="object-cover h-32 w-full"
-                  srcset=""
-                  src=""
+                  srcSet=""
+                  src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   style={{ color: "transparent" }}
                 />{" "}
               </a>
@@ -110,7 +110,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time datetime="2024-06-24T11:23:47.000Z">
+                      <time >
                         June 24, 2024
                       </time>
                     </div>
@@ -136,8 +136,8 @@ const Section4 = () => {
                   decoding="async"
                   data-nimg="1"
                   className="object-cover h-32 w-full"
-                  srcset=""
-                  src=""
+                  srcSet=""
+                  src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   style={{ color: "transparent" }}
                 />{" "}
               </a>
@@ -179,7 +179,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time datetime="2024-06-19T10:56:12.000Z">
+                      <time>
                         June 19, 2024
                       </time>
                     </div>
@@ -206,8 +206,8 @@ const Section4 = () => {
                   decoding="async"
                   data-nimg="1"
                   className="object-cover h-32 w-full"
-                  srcset=""
-                  src=""
+                  srcSet=""
+                  src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   style={{ color: "transparent" }}
                 />{" "}
               </a>
@@ -255,7 +255,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time datetime="2024-06-18T14:39:02.000Z">
+                      <time>
                         June 18, 2024
                       </time>
                     </div>
@@ -281,8 +281,8 @@ const Section4 = () => {
                   decoding="async"
                   data-nimg="1"
                   className="object-cover h-32 w-full"
-                  srcset=""
-                  src=""
+                  srcSet=""
+                  src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   style={{ color: "transparent" }}
                 />
               </a>
@@ -330,7 +330,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time datetime="2024-06-13T13:54:09.000Z">
+                      <time >
                         June 13, 2024
                       </time>
                     </div>

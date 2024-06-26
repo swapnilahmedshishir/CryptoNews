@@ -130,7 +130,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
             </a>
@@ -182,7 +182,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
             </a>
@@ -235,7 +235,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />{" "}
             </a>
@@ -294,7 +294,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
             </a>
@@ -346,7 +346,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
             </a>
@@ -399,7 +399,7 @@ const Section2 = () => {
                 data-nimg="1"
                 className="w-full h-auto"
                 srcSet=""
-                src=""
+                src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />{" "}
             </a>
