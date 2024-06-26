@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeroHome1 = () => {
+const Section1 = () => {
   return (
     <section className="flex flex-row flex-wrap xl:flex-nowrap overflow-hidden divide-x">
       {/* frist part Start */}
@@ -468,9 +468,8 @@ const HeroHome1 = () => {
                       data-nimg="1"
                       className="w-full h-auto"
                       sizes="(min-width: 60em) 300px, (min-width: 28em) 150px"
-                      srcset="https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      srcSet="https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                       style={{ color: "transparent" }}
-                      pinger-seen="true"
                     />
                   </a>
                 </div>
@@ -519,7 +518,7 @@ const HeroHome1 = () => {
                   <div className="flex justify-start items-start gap-1">
                     <p className="text-xs uppercase text-light-gray">/</p>
                     <p className="text-xs uppercase text-light-gray">
-                      <time datetime="2024-06-24T11:23:47.000Z">
+                      <time >
                         18 hours ago
                       </time>
                     </p>
@@ -534,4 +533,4 @@ const HeroHome1 = () => {
   );
 };
 
-export default HeroHome1;
+export default Section1;
