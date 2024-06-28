@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { TimelineMax, Linear } from 'gsap';
 import CryptoPrice from './CryptoPrice';
 
@@ -15,14 +15,8 @@ const HeaderScroll = () => {
     const $list = listRef.current;
     const $clonedList = clonedListRef.current;
 
-    let listWidth = 10;
-    const listItems = $list.querySelectorAll('li');
-
-    listItems.forEach(item => {
-      listWidth += item.offsetWidth;
-    });
-
-    const endPos = $tickerWrapper.offsetWidth - listWidth;
+    const listItemWidth = 155; 
+        const listWidth = listItemWidth * symbols.length;
 
     [$list, $clonedList].forEach(el => {
       el.style.width = `${listWidth}px`;
@@ -31,7 +25,7 @@ const HeaderScroll = () => {
     $clonedList.classList.add('cloned');
 
     const infinite = new TimelineMax({ repeat: -1, paused: true });
-    const time = 10;
+    const time = 25;
 
     infinite
       .fromTo($list, time, { x: 0 }, { x: -listWidth, ease: Linear.easeNone }, 0)
@@ -50,20 +44,20 @@ const HeaderScroll = () => {
       $tickerWrapper.removeEventListener('mouseenter', () => infinite.pause());
       $tickerWrapper.removeEventListener('mouseleave', () => infinite.play());
     };
-  }, []);
+  }, [symbols.length]);
 
   return (
-    <div className="relative top-1 left-0 border-gray-100 border-solid border-b-2 bg-white w-ful overflow-hidden cursor-pointer" ref={tickerWrapperRef}>
-      <ul className="relative inline-block list-none p-0 m-0 w-full" ref={listRef}>
+    <div className="relative top-1 left-0 pb-1 border-gray-100 border-solid border-b-2 bg-white w-full overflow-hidden cursor-pointer" ref={tickerWrapperRef}>
+      <ul className="flex p-0 m-0 w-full" ref={listRef}>
         {symbols.map((symbol, index) => (
-          <li className="float-left pl-5" key={index+ symbols.length}>
+          <li className="ml-1" style={{ width: '155px', display: 'inline-block' }} key={index}>
             <CryptoPrice symbol={symbol} />
           </li>
         ))}
       </ul>
-      <ul className="absolute top-0 left-0 inline-block list-none p-0 m-0 w-full" ref={clonedListRef}>
+      <ul className="flex p-0 m-0 w-full absolute top-0 left-0" ref={clonedListRef}>
         {symbols.map((symbol, index) => (
-          <li className="float-left pl-5" key={index + symbols.length}>
+          <li className="ml-1" style={{ width: '155px', display: 'inline-block' }} key={index + symbols.length}>
             <CryptoPrice symbol={symbol} />
           </li>
         ))}

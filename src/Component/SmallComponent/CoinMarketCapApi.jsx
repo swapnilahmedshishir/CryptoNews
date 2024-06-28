@@ -1,46 +1,50 @@
+// CryptoList.js
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const CryptoPrice = ({ symbol }) => {
-  const [rate, setRate] = useState(null);
-  const [lastRate, setLastRate] = useState(null);
+const CryptoList = () => {
+  const [cryptoData, setCryptoData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@kline_1d`);
+    // Replace this URL with the API endpoint you want to use
+    const apiURL = 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 
-    ws.onmessage = (event) => {
-      const message = JSON.parse(event.data);
-      const { k: { p } } = message;
-      const newRate = parseFloat(p).toFixed(3);
-
-      // Only update if newRate is a valid number
-      if (!isNaN(newRate)) {
-        setLastRate(rate);
-        setRate(newRate);
+    // Function to fetch data
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiURL, {
+          headers: {
+            'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
+          }
+        });
+        setCryptoData(response.data.data);
+        setLoading(false);
+      } catch (ex) {
+        console.error(ex);
+        setError(ex);
+        setLoading(false);
       }
     };
 
-    return () => {
-      ws.close();
-    };
-  }, [symbol, rate]);
+    fetchData();
+  }, []);
+  console.log(cryptoData);
 
-//   const getRateStyle = () => {
-//     if (!rate || !lastRate || rate === lastRate) {
-//       return { color: 'black' };
-//     } else if (rate > lastRate) {
-//       return { color: 'green' };
-//     } else {
-//       return { color: 'red' };
-//     }
-//   };
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <>
-      {rate !== null && (
-        <span className="text-xs" >{rate}%</span>
-      )}
+     {cryptoData.map(crypto => (
+          <span key={crypto.id}>
+            {/* {crypto.name} */}
+            {crypto.name} ({crypto.symbol}): ${crypto.quote.USD.price.toFixed(2)}
+          </span>
+        ))}
     </>
   );
 };
 
-export default CryptoPrice;
+export default CryptoList;

@@ -49,8 +49,8 @@ const Navbars = () => {
                         <div>
                           <NavLink to="/home" className="">
                             <img
-                              className="h-7"
-                              src="/original.png"
+                              
+                              src="/Tojo- News-Logo-300px.png"
                               alt="logo"
                             />
                           </NavLink>
@@ -332,7 +332,7 @@ const Navbars = () => {
           </div>
           <div className="pr-28 lg:pr-1">
             <NavLink to="/home" className="">
-              <img className="h-36" src="/original.png" alt="logo" />
+              <img  src="/Tojo-News-Logo-150px.png" alt="logo" />
             </NavLink>
           </div>
           <div className="flex">
