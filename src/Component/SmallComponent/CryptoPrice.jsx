@@ -42,7 +42,7 @@ const CryptoPrice = (props) => {
   return (
     <>
       {price ? (
-        <span className={`text-sm ${getPriceStyle()}`}>{symbol} ${price} -0.10 %  <CryptoPriceRate symbol={symbol} /></span>
+        <span className={`text-sm ${getPriceStyle()}`}>{symbol} ${price} -0.10 % </span>
       ) : (
         <p className="text-xs">Loading...</p>
       )}
