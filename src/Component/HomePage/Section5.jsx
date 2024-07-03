@@ -18,7 +18,7 @@ const Section5 = () => {
         </div>
         <div>
           <a
-            className="text-sm text-center md:text-left uppercase text-primary"
+            className="text-sm text-center md:text-left uppercase text-[#5637CD]"
             href="/podcasts"
           >
             <span className="flex align-middle">
@@ -68,7 +68,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/0xresearch"
                     >
                       0xResearch
@@ -178,7 +178,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All 0xResearch Episodes"
                         href="/podcast/0xresearch"
                       >
@@ -228,7 +228,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/bellcurve"
                     >
                       Bell Curve
@@ -335,7 +335,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Bell Curve Episodes"
                         href="/podcast/bellcurve"
                       >
@@ -385,7 +385,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/bitcoinbuilders"
                     >
                       Bitcoin Builders
@@ -462,7 +462,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Bitcoin Builders Episodes"
                         href="/podcast/bitcoinbuilders"
                       >
@@ -512,7 +512,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/empire"
                     >
                       Empire
@@ -621,7 +621,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Empire Episodes"
                         href="/podcast/empire"
                       >
@@ -671,7 +671,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/expansion"
                     >
                       Expansion{" "}
@@ -758,7 +758,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Expansion  Episodes"
                         href="/podcast/expansion"
                       >
@@ -808,7 +808,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/forwardguidance"
                     >
                       Forward Guidance
@@ -915,7 +915,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Forward Guidance Episodes"
                         href="/podcast/forwardguidance"
                       >
@@ -965,7 +965,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/lightspeed"
                     >
                       Lightspeed
@@ -1044,7 +1044,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All Lightspeed Episodes"
                         href="/podcast/lightspeed"
                       >
@@ -1094,7 +1094,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/onthemargin"
                     >
                       On The Margin
@@ -1200,7 +1200,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All On The Margin Episodes"
                         href="/podcast/onthemargin"
                       >
@@ -1250,7 +1250,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/on-the-other-side"
                     >
                       On The Other Side
@@ -1324,7 +1324,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All On The Other Side Episodes"
                         href="/podcast/on-the-other-side"
                       >
@@ -1374,7 +1374,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/thebreakdown"
                     >
                       The Breakdown
@@ -1449,7 +1449,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All The Breakdown Episodes"
                         href="/podcast/thebreakdown"
                       >
@@ -1499,7 +1499,7 @@ const Section5 = () => {
                 <div className="gap-2">
                   <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                     <a
-                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                      className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                       href="/podcast/empire"
                     >
                       1000x
@@ -1606,7 +1606,7 @@ const Section5 = () => {
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                       <a
-                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary hover:text-light-gray"
+                        className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-light-gray"
                         aria-label="All 1000x Episodes"
                         href="/podcast/empire"
                       >

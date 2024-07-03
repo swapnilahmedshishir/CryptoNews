@@ -22,7 +22,7 @@ const Section4 = () => {
           <a
             href="https://blockworksresearch.com"
             rel="nofollow"
-            className="text-sm text-center md:text-left uppercase text-primary"
+            className="text-sm text-center md:text-left uppercase text-[#5637CD]"
           >
             <span className="flex align-middle">
               more research
@@ -73,14 +73,14 @@ const Section4 = () => {
             <div className="gap-6">
               <div className="gap-2">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary">
+                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD]">
                     Blockworks Research
                   </p>
                 </div>
                 <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                   <a
                     href="https://app.blockworksresearch.com/research/polygon-protocol-governance-call-ppgc-21"
-                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -110,9 +110,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time >
-                        June 24, 2024
-                      </time>
+                      <time>June 24, 2024</time>
                     </div>
                   </div>
                 </div>
@@ -147,14 +145,14 @@ const Section4 = () => {
             <div className="gap-6">
               <div className="gap-2">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary">
+                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD]">
                     Blockworks Research
                   </p>
                 </div>
                 <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                   <a
                     href="https://app.blockworksresearch.com/research/st-eth-ethereum-s-preeminent-institutional-grade-product"
-                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -179,9 +177,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time>
-                        June 19, 2024
-                      </time>
+                      <time>June 19, 2024</time>
                     </div>
                   </div>
                 </div>
@@ -217,14 +213,14 @@ const Section4 = () => {
             <div className="gap-6">
               <div className="gap-2">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary">
+                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD]">
                     Blockworks Research
                   </p>
                 </div>
                 <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                   <a
                     href="https://app.blockworksresearch.com/research/wormhole-native-token-transfers-ntt"
-                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -255,9 +251,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time>
-                        June 18, 2024
-                      </time>
+                      <time>June 18, 2024</time>
                     </div>
                   </div>
                 </div>
@@ -292,14 +286,14 @@ const Section4 = () => {
             <div className="gap-6">
               <div className="gap-2">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-primary">
+                  <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD]">
                     Blockworks Research
                   </p>
                 </div>
                 <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
                   <a
                     href="https://app.blockworksresearch.com/research/ethereum-s-future-emerging-technologies-for-a-scalable-and-decentralized-future"
-                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-primary"
+                    className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -330,9 +324,7 @@ const Section4 = () => {
                       <span> /</span>
                     </div>
                     <div className="flex justify-start items-start relative gap-1 uppercase">
-                      <time >
-                        June 13, 2024
-                      </time>
+                      <time>June 13, 2024</time>
                     </div>
                   </div>
                 </div>

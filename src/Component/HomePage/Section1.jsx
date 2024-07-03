@@ -1,24 +1,26 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import NewsNav from "../Navbars/NewsNav";
 
 const Section1 = () => {
   return (
     <section className="flex flex-row flex-wrap xl:flex-nowrap overflow-hidden divide-x">
       {/* frist part Start */}
       <div className="order-2 lg:order-1 h-full w-full lg:basis-1/3 xl:basis-1/4">
-        <div className="gap-2.5 px-10 py-5 border-b w-full">
+        <div className="flex flex-row justify-between gap-2.5 px-10 py-5 border-b w-full">
           <p className="text-xs uppercase font-semibold">
             <a href="/news">latest news</a>
           </p>
+          <NewsNav />
         </div>
+
         <div className="gap-10 px-10 py-5 divide-y divide-gray-200 w-full">
           <section className="flex gap-3 py-5 w-full">
             <div className="item-center py-1.5 w-1/12 flex">
-              <p className="text-xs uppercase text-primary">8h</p>
+              <p className="text-xs uppercase text-[#5637CD]">8h</p>
             </div>
             <div className="flex items-center w-11/12">
               <Link to="/">
-                <span className="text-sm font-semibold font-headline visited:text-gray-700 hover:text-primary whitespace-normal">
+                <span className="text-sm font-semibold font-headline visited:text-gray-700 hover:text-[#5637CD] whitespace-normal">
                   On the Margin Newsletter: How low BTC’s price might go after
                   Monday’s dip
                 </span>
@@ -39,15 +41,15 @@ const Section1 = () => {
               <div className="flex flex-col justify-start items-start self-stretch gap-2">
                 <div className="flex justify-start items-center relative gap-1">
                   <p>
-                    <Link to="/" className="text-primary text-xs uppercase">
+                    <Link to="/" className="text-[#5637CD] text-xs uppercase">
                       Analysis
                     </Link>
                   </p>
                 </div>
                 <div className="gap-2.5 font-headline">
                   <Link
-                    to="/"
-                    className="flex-grow text-2xl md:text-3xl xl:text-4xl leading-snug hover:text-primary"
+                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    className="flex-grow text-2xl md:text-3xl xl:text-4xl leading-snug hover:text-[#5637CD]"
                   >
                     On the Margin Newsletter: How low BTC’s price might go after
                     Monday’s dip
@@ -77,7 +79,10 @@ const Section1 = () => {
                   </div>
                 </div>
                 <div className="mt-0.5 w-full">
-                  <Link to="/" className="cursor-pointer">
+                  <Link
+                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    className="cursor-pointer"
+                  >
                     <img
                       alt="article-image"
                       fetchPriority="high"
@@ -100,7 +105,7 @@ const Section1 = () => {
                 <div className="gap-1">
                   <p className="flex gap-2 flex-grow">
                     <Link
-                      className="text-primary text-xs uppercase"
+                      className="text-[#5637CD] text-xs uppercase"
                       to="/category/business"
                     >
                       Business
@@ -109,7 +114,7 @@ const Section1 = () => {
                 </div>
                 <div className="mt-1 gap-2.5">
                   <Link
-                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-primary"
+                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
                     to="/news/riot-nominates-bitfarms-board-directors-takeover"
                   >
                     Riot nominates directors for Bitfarms board as part of
@@ -160,7 +165,7 @@ const Section1 = () => {
                 <div className="gap-1">
                   <p className="flex gap-2 flex-grow">
                     <Link
-                      className="text-primary text-xs uppercase"
+                      className="text-[#5637CD] text-xs uppercase"
                       to="/category/analysis"
                     >
                       Analysis
@@ -169,7 +174,7 @@ const Section1 = () => {
                 </div>
                 <div className="mt-1 gap-2.5">
                   <Link
-                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-primary"
+                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
                     to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
                   >
                     Lightspeed Newsletter: Solana Permissioned Environments may
@@ -224,7 +229,7 @@ const Section1 = () => {
                 <div className="gap-1">
                   <p className="flex gap-2 flex-grow">
                     <Link
-                      className="text-primary text-xs uppercase"
+                      className="text-[#5637CD] text-xs uppercase"
                       to="/category/analysis"
                     >
                       Analysis
@@ -233,7 +238,7 @@ const Section1 = () => {
                 </div>
                 <div className="mt-1 gap-2.5">
                   <Link
-                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-primary"
+                    className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
                     to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
                   >
                     Lightspeed Newsletter: Solana Permissioned Environments may
@@ -286,7 +291,7 @@ const Section1 = () => {
                   <div className="flex justify-start items-center flex-grow h-8 pr-2 max-w-sm">
                     <div className="flex justify-start items-start flex-grow relative gap-2.5">
                       <p className="flex-grow text-sm text-left">
-                        <a className="hover:text-primary" href="/prices">
+                        <a className="hover:text-[#5637CD]" href="/prices">
                           Total Crypto Market Cap
                         </a>
                       </p>
@@ -294,7 +299,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">
+                      <p className="flex-grow text-sm text-[#5637CD]">
                         <a href="/prices">$2.65 T</a>
                       </p>
                     </div>
@@ -304,7 +309,7 @@ const Section1 = () => {
                   <div className="flex justify-start items-center flex-grow h-8 pr-2 max-w-sm">
                     <div className="flex justify-start items-start flex-grow relative gap-2.5">
                       <p className="flex-grow text-sm text-left">
-                        <a className="hover:text-primary" href="/price/btc">
+                        <a className="hover:text-[#5637CD]" href="/price/btc">
                           Bitcoin Market Cap
                         </a>
                       </p>
@@ -312,7 +317,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">
+                      <p className="flex-grow text-sm text-[#5637CD]">
                         <a href="/price/btc">$1.32 T</a>
                       </p>
                     </div>
@@ -322,7 +327,7 @@ const Section1 = () => {
                   <div className="flex justify-start items-center flex-grow h-8 pr-2 max-w-sm">
                     <div className="flex justify-start items-start flex-grow relative gap-2.5">
                       <p className="flex-grow text-sm text-left">
-                        <a className="hover:text-primary" href="/price/eth">
+                        <a className="hover:text-[#5637CD]" href="/price/eth">
                           Ethereum Market Cap
                         </a>
                       </p>
@@ -330,7 +335,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">
+                      <p className="flex-grow text-sm text-[#5637CD]">
                         <a href="/price/eth">$421.48 B</a>
                       </p>
                     </div>
@@ -346,7 +351,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">0.05</p>
+                      <p className="flex-grow text-sm text-[#5637CD]">0.05</p>
                     </div>
                   </div>
                 </div>
@@ -360,7 +365,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">5 gwei</p>
+                      <p className="flex-grow text-sm text-[#5637CD]">5 gwei</p>
                     </div>
                   </div>
                 </div>
@@ -372,7 +377,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">
+                      <p className="flex-grow text-sm text-[#5637CD]">
                         $183.99 B
                       </p>
                     </div>
@@ -388,7 +393,7 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">
+                      <p className="flex-grow text-sm text-[#5637CD]">
                         30 (Fear)
                       </p>
                     </div>
@@ -404,7 +409,9 @@ const Section1 = () => {
                   </div>
                   <div className="flex justify-start items-center h-8">
                     <div className="flex justify-start items-center flex-grow relative gap-1 text-right">
-                      <p className="flex-grow text-sm text-primary">$7.25 T</p>
+                      <p className="flex-grow text-sm text-[#5637CD]">
+                        $7.25 T
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -414,7 +421,7 @@ const Section1 = () => {
             <div className="gap-4 p-10 border-t md:border-t-0 xl:border-t md:grow xl:shrink md:justify-center grow items-center flex flex-col">
               <div className="flex flex-col justify-start items-start self-stretch gap-2">
                 <div className="flex justify-start items-center self-stretch relative gap-1">
-                  <p className="flex-grow text-xs uppercase text-primary">
+                  <p className="flex-grow text-xs uppercase text-[#5637CD]">
                     <a href="/newsletter">Newsletter</a>
                   </p>
                 </div>
@@ -474,7 +481,7 @@ const Section1 = () => {
                   </a>
                 </div>
                 <div className="flex justify-start items-center self-stretch gap-1">
-                  <p className="flex-grow text-xs uppercase text-primary">
+                  <p className="flex-grow text-xs uppercase text-[#5637CD]">
                     Research
                   </p>
                 </div>
@@ -482,7 +489,7 @@ const Section1 = () => {
                   <a
                     href="https://app.blockworksresearch.com/research/polygon-protocol-governance-call-ppgc-21"
                     target="_blank"
-                    className="flex-grow text-[22px] font-headline hover:text-primary"
+                    className="flex-grow text-[22px] font-headline hover:text-[#5637CD]"
                     rel="noreferrer"
                   >
                     Polygon Protocol Governance Call (PPGC) #21
@@ -507,7 +514,7 @@ const Section1 = () => {
                       by{" "}
                       <a
                         href="https://app.blockworksresearch.com/team/boccaccio"
-                        className="text-primary hover:text-dark"
+                        className="text-[#5637CD] hover:text-dark"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -518,9 +525,7 @@ const Section1 = () => {
                   <div className="flex justify-start items-start gap-1">
                     <p className="text-xs uppercase text-light-gray">/</p>
                     <p className="text-xs uppercase text-light-gray">
-                      <time >
-                        18 hours ago
-                      </time>
+                      <time>18 hours ago</time>
                     </p>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Section2 = () => {
   return (
@@ -7,7 +8,7 @@ const Section2 = () => {
         <div className="flex justify-start items-center gap-3">
           <div className="relative">
             <h2 className="text-base uppercase text-dark font-semibold">
-              <a href="/news">news</a>
+              <Link to="/news">news</Link>
             </h2>
           </div>
           <div className="hidden md:flex justify-start items-start text-center md:text-left relative gap-2.5">
@@ -17,28 +18,15 @@ const Section2 = () => {
           </div>
         </div>
         <div>
-          <a
-            className="text-sm text-center md:text-left uppercase text-primary"
-            href="/news"
+          <Link
+            className="text-sm text-center md:text-left uppercase text-[#5637CD]"
+            to="/news"
           >
             <span className="flex align-middle">
               more from news
-              <svg
-                width="8"
-                height="4"
-                viewBox="0 0 8 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-1 mt-1.5"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M6.005 1.5H0V2.5H6.005V4L8 2L6.005 0V1.5Z"
-                  fill="#5637CD"
-                ></path>
-              </svg>
+              <FaArrowRightLong className="ml-1 mt-1" width="8" height="4" />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -46,7 +34,7 @@ const Section2 = () => {
         <div>
           <div className="uppercase py-8 lg:py-4">
             <div className="md:hidden">
-              <label for="tabs" className="sr-only">
+              <label htmlFor="tabs" className="sr-only">
                 Select a tab
               </label>
               <select
@@ -117,9 +105,9 @@ const Section2 = () => {
         </div>
         <div className="mt-0 md:mt-6 lg:mt-12 grid gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/bitcoin-bull-markets-comparison"
+              to="/news/bitcoin-bull-markets-comparison"
             >
               <img
                 alt="article-image"
@@ -133,19 +121,19 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/markets">Markets</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/markets">Markets</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/bitcoin-bull-markets-comparison"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/bitcoin-bull-markets-comparison"
               >
                 How this bitcoin bull market stacks up against the others
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -157,9 +145,9 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/david-canellis">
+                  <Link className="link-gray" to="/author/david-canellis">
                     David Canellis
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>
@@ -169,9 +157,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/riot-nominates-bitfarms-board-directors-takeover"
+              to="/news/riot-nominates-bitfarms-board-directors-takeover"
             >
               <img
                 alt="article-image"
@@ -185,20 +173,20 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/business">Business</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/business">Business</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/riot-nominates-bitfarms-board-directors-takeover"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/riot-nominates-bitfarms-board-directors-takeover"
               >
                 Riot nominates directors for Bitfarms board as part of takeover
                 saga
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -210,9 +198,9 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/benstrack">
+                  <Link className="link-gray" to="/author/benstrack">
                     Ben Strack
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>
@@ -222,9 +210,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/empire-newsletter-summer-market-madness"
+              to="/news/empire-newsletter-summer-market-madness"
             >
               <img
                 alt="article-image"
@@ -238,20 +226,20 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />{" "}
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/analysis">Analysis</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/analysis">Analysis</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/empire-newsletter-summer-market-madness"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/empire-newsletter-summer-market-madness"
               >
                 Empire Newsletter: Market madness arrives just in time for
                 summer
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -263,15 +251,15 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/katherine-ross">
+                  <Link className="link-gray" to="/author/katherine-ross">
                     Katherine Ross
-                  </a>
+                  </Link>
                   <span className="ml-1">&amp;</span>
                 </span>
                 <span>
-                  <a className="link-gray" href="/author/david-canellis">
+                  <Link className="link-gray" to="/author/david-canellis">
                     David Canellis
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>
@@ -281,9 +269,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/ethereum-altcoin-etf-sec-gensler"
+              to="/news/ethereum-altcoin-etf-sec-gensler"
             >
               <img
                 alt="article-image"
@@ -297,19 +285,19 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/opinion">Opinion</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/opinion">Opinion</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/ethereum-altcoin-etf-sec-gensler"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/ethereum-altcoin-etf-sec-gensler"
               >
                 Don’t hold your breath for an altcoin ETF
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -321,9 +309,9 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/nikita-ovchinnik">
+                  <Link className="link-gray" to="/author/nikita-ovchinnik">
                     Nikita Ovchinnik
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>
@@ -333,9 +321,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/bondex-gamifies-recruiting-with-web3-blockchain"
+              to="/news/bondex-gamifies-recruiting-with-web3-blockchain"
             >
               <img
                 alt="article-image"
@@ -349,19 +337,19 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/business">Business</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/business">Business</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/bondex-gamifies-recruiting-with-web3-blockchain"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/bondex-gamifies-recruiting-with-web3-blockchain"
               >
                 Funding Roundup: A Web3 recruiting network announces $10M raise
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -373,9 +361,9 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/katherine-ross">
+                  <Link className="link-gray" to="/author/katherine-ross">
                     Katherine Ross
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>
@@ -385,9 +373,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-            <a
+            <Link
               className="cursor-pointer"
-              href="/news/former-blackrock-exec-joins-21shares"
+              to="/news/former-blackrock-exec-joins-21shares"
             >
               {" "}
               <img
@@ -402,19 +390,19 @@ const Section2 = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />{" "}
-            </a>
+            </Link>
             <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
-              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-primary gap-2">
-                <a href="/category/business">Business</a>
+              <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
+                <Link to="/category/business">Business</Link>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-              <a
-                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-primary"
-                href="/news/former-blackrock-exec-joins-21shares"
+              <Link
+                className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
+                to="/news/former-blackrock-exec-joins-21shares"
               >
                 Crypto Hiring: Former BlackRock leader jumps ship to 21Shares
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
               <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
@@ -426,9 +414,9 @@ const Section2 = () => {
               <div className="flex flex-wrap gap-1 uppercase">
                 by{" "}
                 <span>
-                  <a className="link-gray" href="/author/benstrack">
+                  <Link className="link-gray" to="/author/benstrack">
                     Ben Strack
-                  </a>
+                  </Link>
                 </span>
                 <span> /</span>
               </div>

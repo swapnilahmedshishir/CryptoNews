@@ -13,7 +13,7 @@ const Section3 = () => {
         </div>
         <div>
           <a
-            className="text-sm text-center md:text-left uppercase text-primary"
+            className="text-sm text-center md:text-left uppercase text-[#5637CD]"
             href="/events"
           >
             <span className="align-middle flex sm:hidden">
@@ -63,7 +63,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-primary">
+                <p className="text-xxs text-left uppercase text-[#5637CD]">
                   events
                 </p>
               </div>
@@ -71,7 +71,7 @@ const Section3 = () => {
             <div className="flex justify-start relative gap-2.5">
               <p className="flex-grow">
                 <a
-                  className="text-xl font-semibold text-dark hover:text-primary"
+                  className="text-xl font-semibold text-dark hover:text-[#5637CD]"
                   href="/event/permissionless-iii"
                 >
                   Permissionless III
@@ -166,7 +166,7 @@ const Section3 = () => {
           </div>
           <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <a
-              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-primary hover:text-black"
+              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-[#5637CD] hover:text-black"
               href="/event/permissionless-iii"
             >
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
@@ -195,7 +195,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-primary">
+                <p className="text-xxs text-left uppercase text-[#5637CD]">
                   events
                 </p>
               </div>
@@ -203,7 +203,7 @@ const Section3 = () => {
             <div className="flex justify-start relative gap-2.5">
               <p className="flex-grow">
                 <a
-                  className="text-xl font-semibold text-dark hover:text-primary"
+                  className="text-xl font-semibold text-dark hover:text-[#5637CD]"
                   href="/event/permissionless-iii-hackathon"
                 >
                   Permissionless III Hackathon
@@ -298,7 +298,7 @@ const Section3 = () => {
           </div>
           <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <a
-              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-primary hover:text-black"
+              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-[#5637CD] hover:text-black"
               href="/event/permissionless-iii-hackathon"
             >
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
@@ -327,7 +327,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-primary">
+                <p className="text-xxs text-left uppercase text-[#5637CD]">
                   webinar
                 </p>
               </div>
@@ -335,7 +335,7 @@ const Section3 = () => {
             <div className="flex justify-start relative gap-2.5">
               <p className="flex-grow">
                 <a
-                  className="text-xl font-semibold text-dark hover:text-primary"
+                  className="text-xl font-semibold text-dark hover:text-[#5637CD]"
                   href="/webinar/bringing-onchain-gaming-to-the-masses"
                 >
                   Bringing Onchain Gaming to the Masses
@@ -363,9 +363,7 @@ const Section3 = () => {
                 </svg>
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                   <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-dark">
-                    <time>
-                      July 23, 2024
-                    </time>
+                    <time>July 23, 2024</time>
                   </p>
                 </div>
               </div>
@@ -382,7 +380,7 @@ const Section3 = () => {
           </div>
           <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <a
-              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-primary hover:text-black"
+              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-[#5637CD] hover:text-black"
               href="/webinar/bringing-onchain-gaming-to-the-masses"
             >
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
@@ -411,7 +409,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-primary">
+                <p className="text-xxs text-left uppercase text-[#5637CD]">
                   webinar
                 </p>
               </div>
@@ -419,7 +417,7 @@ const Section3 = () => {
             <div className="flex justify-start relative gap-2.5">
               <p className="flex-grow">
                 <a
-                  className="text-xl font-semibold text-dark hover:text-primary"
+                  className="text-xl font-semibold text-dark hover:text-[#5637CD]"
                   href="/webinar/crypto-state-of-the-union-etfs-defi-activity"
                 >
                   Crypto State of the Union: ETFs &amp; DeFi Activity
@@ -466,7 +464,7 @@ const Section3 = () => {
           </div>
           <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <a
-              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-primary hover:text-black"
+              className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-0.5 text-[#5637CD] hover:text-black"
               href="/webinar/crypto-state-of-the-union-etfs-defi-activity"
             >
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">

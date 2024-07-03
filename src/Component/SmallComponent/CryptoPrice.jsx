@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from "prop-types";
-import CryptoPriceRate from './CoinMarketCapApi';
+// import CryptoPriceRate from './CoinMarketCapApi';
 
 const CryptoPrice = (props) => {
   const { symbol } = props;
   const [price, setPrice] = useState(null);
   const [lastPrice, setLastPrice] = useState(null);
 
-  useEffect(() => {
-    // const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}usdt@trade`);
+  useEffect(() => {   
     const ws = new WebSocket(`wss://fstream.binance.com/ws/${symbol.toLowerCase()}usdt@aggTrade`);
     
-    
-//     wss://fstream.binance.com/ws/bnbusdt@aggTrade
-// wss://fstream.binance.com/stream?streams=bnbusdt@aggTrade/btcusdt@markPrice
-
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data);
       // console.log(message);

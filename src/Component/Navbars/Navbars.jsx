@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { IoChevronDownOutline , IoReorderThreeOutline } from "react-icons/io5";
+import { IoReorderThreeOutline } from "react-icons/io5";
 import { useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { FaXmark } from "react-icons/fa6";
+import NewsNav from "./NewsNav";
 
 const Navbars = () => {
   // const [clicked, setClicked] = useState(false);
@@ -29,7 +30,7 @@ const Navbars = () => {
       <div className="border-gray-100 border-solid border-b-2">
         <div className="flex justify-between md:justify-normal lg:justify-between  items-center mx-3">
           {/* colpace button */}
-          <div className="block lg:hidden relative">
+          <div className="block lg:hidden relative z-10">
             <ul className="flex basis-auto uppercase gap-3">
               <li className="" onClick={() => setIsOpen(!isOpen)}>
                 <button
@@ -47,12 +48,8 @@ const Navbars = () => {
                     <div className="pt-4 pb-6 px-4 text-xs">
                       <div className="flex items-center justify-between">
                         <div>
-                          <NavLink to="/home" className="">
-                            <img
-                              
-                              src="/Tojo- News-Logo-300px.png"
-                              alt="logo"
-                            />
+                          <NavLink to="/" className="">
+                            <img src="/Tojo- News-Logo-300px.png" alt="logo" />
                           </NavLink>
                         </div>
                         <button
@@ -63,7 +60,7 @@ const Navbars = () => {
                           data-headlessui-state=""
                           id="headlessui-popover-button-:r2:"
                         >
-                          <FaXmark  className="text-3xl mx-2 my-1" />
+                          <FaXmark className="text-3xl mx-2 my-1" />
                         </button>
                       </div>
                       <div className="mt-6 px-1">
@@ -72,7 +69,7 @@ const Navbars = () => {
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/markets"
                           >
-                            Markets
+                            crypto
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
@@ -84,19 +81,19 @@ const Navbars = () => {
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/policy"
                           >
-                            Policy
+                            Business
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/business"
                           >
-                            Business
+                            Analysis
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/defi"
                           >
-                            DeFi
+                            Opinion
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
@@ -108,13 +105,13 @@ const Navbars = () => {
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/people"
                           >
-                            People
+                            DeFi
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
                             href="/category/opinion"
                           >
-                            Opinion
+                            People
                           </a>
                           <a
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
@@ -127,12 +124,6 @@ const Navbars = () => {
                             href="/category/sponsored"
                           >
                             Sponsored
-                          </a>
-                          <a
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/analysis"
-                          >
-                            Analysis
                           </a>
                         </nav>
                       </div>
@@ -157,12 +148,7 @@ const Navbars = () => {
                         >
                           Podcasts
                         </a>
-                        <a
-                          className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/bitcoin-etf"
-                        >
-                          Bitcoin ETF Tracker
-                        </a>
+
                         <a
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
                           href="/prices"
@@ -182,8 +168,8 @@ const Navbars = () => {
                           Roundtables
                         </a>
                         <a
-                          href="https://app.blockworksresearch.com"
-                          className="flex items-center font-medium text-gray-900 text-primary py-1 px-2 hover:bg-primary hover:text-white"
+                          href=""
+                          className="flex items-center font-medium text-gray-900 text-[#5637CD] py-1 px-2 hover:bg-primary hover:text-white"
                         >
                           Get Research
                         </a>
@@ -194,130 +180,10 @@ const Navbars = () => {
               </li>
             </ul>
           </div>
-          {/* larg sceen menu bar  */}
+          {/* News large screen menu bar  */}
           <div className="hidden lg:block">
             <ul className="flex basis-auto uppercase gap-3 relative">
-              <li className="relative" onClick={() => setIsOpen(!isOpen)}>
-                <button
-                  className="text-black group bg-white rounded-md inline-flex items-center font-medium hover:text-gray-900 focus:outline-none"
-                  type="button"
-                  aria-expanded="false"
-                  data-headlessui-state=""
-                  id="headlessui-popover-button-:r2:"
-                >
-                  <span className="uppercase hover:text-light-gray">news</span>{" "}
-                  <IoChevronDownOutline className="ml-2" />
-                </button>
-
-                <div className={`${isOpen ? "hidden" : "block"}`}>
-                  <div
-                    className="absolute border-t border-r border-b z-20 -ml-4 mt-2 transform px-2 w-screen max-w-md sm:px-0 lg:ml-3 lg:left-0 lg:-translate-x-6"
-                    id="headlessui-popover-panel-:rp:"
-                    tabIndex="-1"
-                    data-headlessui-state="open"
-                  >
-                    <div className="ring-1 ring-black ring-opacity-5 overflow-hidden">
-                      <div className="relative grid grid-cols-2 gap-6 bg-white px-5 py-6 sm:gap-6 sm:p-6">
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/markets"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Markets
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/finance"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Finance
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/policy"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Policy
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/business"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Business
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/defi"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            DeFi
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/web3"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Web3
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/people"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            People
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/opinion"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Opinion
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/education"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Education
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/sponsored"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Sponsored
-                          </span>
-                        </NavLink>
-                        <NavLink
-                          className="flex -m-3 p-2 items-start hover:bg-gray-50"
-                          to="/category/analysis"
-                        >
-                          <span className="ml-2 text-xs font-medium text-gray-900">
-                            Analysis
-                          </span>
-                        </NavLink>
-                      </div>
-                      <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                        <NavLink className="flow-root" to="/news">
-                          <span className="-m-3 p-2 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-100">
-                            News Archive
-                          </span>
-                        </NavLink>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              <NewsNav />
               <li className=" mx-2">
                 <NavLink to="/home" className="">
                   newsletters
@@ -330,36 +196,32 @@ const Navbars = () => {
               </li>
             </ul>
           </div>
+
           <div className="pr-28 lg:pr-1">
-            <NavLink to="/home" className="">
-              <img  src="/Tojo-News-Logo-150px.png" alt="logo" />
+            <NavLink to="/" className="">
+              <img src="/Tojo-News-Logo-150px.png" alt="logo" />
             </NavLink>
           </div>
           <div className="flex">
             <div className="hidden md:block">
-            <ul className="flex basis-auto  uppercase">
-              <li className=" mx-2">
-                <NavLink to="/home" className="">
-                  ETF TRACKER
-                </NavLink>
-              </li>
-              <li className=" mx-2">
-                <NavLink to="/home" className="">
-                  PRICES
-                </NavLink>
-              </li>
-              <li className=" mx-2">
-                <NavLink to="/home" className="">
-                  EVENTS
-                </NavLink>
-              </li>
-              <li className=" mx-2">
-                <NavLink to="/home" className="">
-                  ROUNDTABLES
-                </NavLink>
-              </li>
-              <li></li>
-            </ul>
+              <ul className="flex basis-auto  uppercase">
+                <li className=" mx-2">
+                  <NavLink to="/home" className="">
+                    PRICES
+                  </NavLink>
+                </li>
+                <li className=" mx-2">
+                  <NavLink to="/home" className="">
+                    EVENTS
+                  </NavLink>
+                </li>
+                <li className=" mx-2">
+                  <NavLink to="/home" className="">
+                    ROUNDTABLES
+                  </NavLink>
+                </li>
+                <li></li>
+              </ul>
             </div>
             <div>
               <NavLink
