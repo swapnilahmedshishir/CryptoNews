@@ -190,7 +190,7 @@ const Footer = () => {
           <div className="text-white flex flex-col justify-center items-start flex-grow-0 flex-shrink-0 relative gap-3">
             <img
               className="flex-grow-0 flex-shrink-0 h-14 w-28 relative text-[#F9FAFB] "
-              src="\Tojo-News-Logo-150px.png"
+              src="\footer.png"
               alt="logo"
             />
 
