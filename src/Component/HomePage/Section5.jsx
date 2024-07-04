@@ -93,7 +93,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -250,7 +250,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -406,7 +406,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -536,7 +536,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -702,7 +702,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -830,7 +830,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -988,7 +988,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -1115,7 +1115,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -1268,7 +1268,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -1393,7 +1393,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>
@@ -1521,7 +1521,7 @@ const Section5 = () => {
                 <div className="mt-4 flex justify-between">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
                     <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1.5">
-                      <p className="pt-0.5 text-xxs text-left uppercase text-gray-500 font-light">
+                      <p className="pt-0.5 text-xs text-left uppercase text-gray-500 font-light">
                         follow
                       </p>
                     </div>

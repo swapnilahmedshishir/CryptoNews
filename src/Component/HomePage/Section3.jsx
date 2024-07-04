@@ -63,7 +63,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-[#5637CD]">
+                <p className="text-xs text-left uppercase text-[#5637CD]">
                   events
                 </p>
               </div>
@@ -195,7 +195,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-[#5637CD]">
+                <p className="text-xs text-left uppercase text-[#5637CD]">
                   events
                 </p>
               </div>
@@ -327,7 +327,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-[#5637CD]">
+                <p className="text-xs text-left uppercase text-[#5637CD]">
                   webinar
                 </p>
               </div>
@@ -409,7 +409,7 @@ const Section3 = () => {
           <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-3">
             <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2">
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-                <p className="text-xxs text-left uppercase text-[#5637CD]">
+                <p className="text-xs text-left uppercase text-[#5637CD]">
                   webinar
                 </p>
               </div>

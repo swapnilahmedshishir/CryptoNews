@@ -102,7 +102,7 @@ const ArticalPage = () => {
                 src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{ color: "transparent" }}
               />
-              <div className="absolute w-full text-right mt-1 mb-0 pb-0 leading-1 text-xxs text-gray-500">
+              <div className="absolute w-full text-right mt-1 mb-0 pb-0 leading-1 text-xs text-gray-500">
                 <p>ddRender/Shutterstock modified by Blockworks</p>
               </div>
             </div>

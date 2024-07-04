@@ -101,7 +101,7 @@ const Section4 = () => {
                   </div>
                 </div>
                 <div className="py-4">
-                  <div className="flex flex-wrap justify-start items-start gap-1 text-xxs">
+                  <div className="flex flex-wrap justify-start items-start gap-1 text-xs">
                     <div className="flex flex-wrap gap-1 uppercase">
                       by{" "}
                       <span>
@@ -168,7 +168,7 @@ const Section4 = () => {
                   </div>
                 </div>
                 <div className="py-4">
-                  <div className="flex flex-wrap justify-start items-start gap-1 text-xxs">
+                  <div className="flex flex-wrap justify-start items-start gap-1 text-xs">
                     <div className="flex flex-wrap gap-1 uppercase">
                       by{" "}
                       <span>
@@ -242,7 +242,7 @@ const Section4 = () => {
                   </div>
                 </div>
                 <div className="py-4">
-                  <div className="flex flex-wrap justify-start items-start gap-1 text-xxs">
+                  <div className="flex flex-wrap justify-start items-start gap-1 text-xs">
                     <div className="flex flex-wrap gap-1 uppercase">
                       by{" "}
                       <span>
@@ -313,7 +313,7 @@ const Section4 = () => {
                   </div>
                 </div>
                 <div className="py-4">
-                  <div className="flex flex-wrap justify-start items-start gap-1 text-xxs">
+                  <div className="flex flex-wrap justify-start items-start gap-1 text-xs">
                     <div className="flex flex-wrap gap-1 uppercase">
                       by{" "}
                       <span>

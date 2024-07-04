@@ -1,0 +1,321 @@
+{
+    "data": [
+        {
+            "news_url": "https://coingape.com/spot-bitcoin-etf-saw-20m-outflow-amid-btc-decline-whats-next/",
+            "image_url": "https://crypto.snapi.dev/images/v1/j/x/bitcoin-etf-1-516892.jpg",
+            "title": "Spot Bitcoin ETFs Saw $20M Outflow Amid BTC Decline, What's Next?",
+            "text": "Spot Bitcoin ETFs saw a net outflow of over $20 million on July 3, with Grayscale's GBTC leading the exodus. While some funds saw outflows, others attracted new capital, reflecting the diverse strategies and sentiments of investors in the crypto space.",
+            "source_name": "Coingape",
+            "date": "Thu, 04 Jul 2024 04:19:14 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://www.coindesk.com/markets/2024/07/04/decoding-the-7b-decline-in-bitcoins-notional-open-interest/",
+            "image_url": "https://crypto.snapi.dev/images/v1/h/a/btc5-506612-516894.jpg",
+            "title": "Decoding The $7B Decline in Bitcoin's Notional Open Interest",
+            "text": "The decline in notional open interest masks bullish undercurrents.",
+            "source_name": "Coindesk",
+            "date": "Thu, 04 Jul 2024 04:14:15 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coingape.com/crypto-market-crash-why-bitcoin-and-altcoins-are-falling/",
+            "image_url": "https://crypto.snapi.dev/images/v1/e/x/crypto-market-crash-516889.webp",
+            "title": "Crypto Market Crash: Why Bitcoin And Altcoins Are Falling",
+            "text": "Crypto market swings back to bear market as the global crypto market cap has now dropped 20% to a low of $2.15 trillion today. The market cap tumbled more than 4.20% over the last 24 hours.",
+            "source_name": "Coingape",
+            "date": "Thu, 04 Jul 2024 04:09:38 -0400",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://u.today/dogecoin-founder-makes-crucial-bitcoin-statement-as-btc-plummets?utm_source=snapi",
+            "image_url": "https://crypto.snapi.dev/images/v1/q/h/49994-516888.jpg",
+            "title": "Dogecoin Founder Makes Crucial Bitcoin Statement as BTC Plummets",
+            "text": "Billy Markus known on the X social media platform (formerly popular as Twitter) as Shibetoshi Nakamoto, who is a co-founder of the iconic meme cryptocurrency Dogecoin, published a post that sums up his attitude to Bitcoin now as it plummeted well below the $60,000 level once again yesterday.",
+            "source_name": "UToday",
+            "date": "Thu, 04 Jul 2024 04:08:00 -0400",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC",
+                "DOGE"
+            ]
+        },
+        {
+            "news_url": "https://www.newsbtc.com/news/bitcoin/bitcoin-price-crash-like-may-2021/",
+            "image_url": "https://crypto.snapi.dev/images/v1/r/a/btc77-509988-516885.jpg",
+            "title": "Bitcoin Price Could Massively Crash Like In May 2021, Warns Fund Manager",
+            "text": "Bitcoin's price has fallen below the critical support level of $60,000, reaching a low of $57,914. Since Tuesday, Bitcoin has experienced a further 7% decline, reinforcing the ongoing downward trend.",
+            "source_name": "NewsBTC",
+            "date": "Thu, 04 Jul 2024 04:05:53 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://cryptoticker.io/en/bitcoin-price-crash",
+            "image_url": "https://crypto.snapi.dev/images/v1/g/s/btc8-506567-516886.jpg",
+            "title": "Will Bitcoin Price Crash to $50,000?",
+            "text": "Is Bitcoin headed for a major drop? What are the signs, and what should you do?",
+            "source_name": "CryptoTicker",
+            "date": "Thu, 04 Jul 2024 04:05:00 -0400",
+            "topics": [
+                "priceforecast",
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://ambcrypto.com/how-bitcoin-holdings-drove-microstrategys-380-stock-surge/",
+            "image_url": "https://crypto.snapi.dev/images/v1/a/d/news-articles-fi-benjamin-2024-07-04t063033592-516883.jpeg",
+            "title": "How Bitcoin holdings drove MicroStrategy's 380% stock surge",
+            "text": "What's next for BTC and the crypto market in H2 2024 after an impressive rally in H1?",
+            "source_name": "AMBCrypto",
+            "date": "Thu, 04 Jul 2024 04:00:22 -0400",
+            "topics": [],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coinpedia.org/price-analysis/will-btc-price-crash-under-56k-100k-a-pipe-dream/",
+            "image_url": "https://crypto.snapi.dev/images/v1/o/3/bitcoin-bulls-alert-btc-price-could-crash-to-60k-this-week-1-516881.webp",
+            "title": "Will BTC Price Crash Under $56K, $100K A Pipe Dream?",
+            "text": "With the release of Mt. Gox Bitcoins, the broader crypto market has experienced a massive surge in supply pressure. As market analysts expect the supply to continue in the coming days, the crash could continue in the BTC and the altcoins price alike.",
+            "source_name": "CoinPedia",
+            "date": "Thu, 04 Jul 2024 03:59:29 -0400",
+            "topics": [
+                "tanalysis",
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coinpedia.org/news/bitcoin-price-prediction-bloodbath-confirmed-next-stop-56000/",
+            "image_url": "https://crypto.snapi.dev/images/v1/t/t/bitcoin-faces-billion-long-liquidations-below-62k-whats-next-516878.webp",
+            "title": "Bitcoin Price Prediction: Bloodbath Confirmed, Next Stop $56,000",
+            "text": "Bitcoin price is currently trading slightly above the crucial $58k levels, leaving everybody surprised with its abrupt dip below the $60k mark. Analyst Josh of Crypto World said that at this moment, there's a reversal signal appearing on the Bitcoin chart. Bitcoin's price is currently retesting a critical support level after encountering resistance, he said.",
+            "source_name": "CoinPedia",
+            "date": "Thu, 04 Jul 2024 03:55:23 -0400",
+            "topics": [
+                "tanalysis",
+                "priceforecast",
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coingape.com/markets/solana-price-analysis-sol-price-remains-bullish-amid-bitcoin-downturn/",
+            "image_url": "https://crypto.snapi.dev/images/v1/b/p/technical-analysis5-516859.jpg",
+            "title": "Solana Price Forecast: 22% Bullish Comeback in the Offing Amid Bitcoin Meltdown",
+            "text": "Solana price forecast: The price of SOL decreased by 8.4% in the last 24 hours to trade at $136 during European business hours. The price drop may have been influenced by Bitcoin's recent drop below the crucial support level of $60,000, which also affected other cryptocurrencies.",
+            "source_name": "Coingape",
+            "date": "Thu, 04 Jul 2024 03:43:43 -0400",
+            "topics": [
+                "priceforecast"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC",
+                "SOL"
+            ]
+        },
+        {
+            "news_url": "https://en.cryptonomist.ch/2024/07/04/bitcoin-news-is-lightning-network-coming-for-institutions/",
+            "image_url": "https://crypto.snapi.dev/images/v1/s/l/bitcoin-news-lightning-network-300x200-516879.jpg",
+            "title": "Bitcoin news: is Lightning Network coming for institutions?",
+            "text": "Increasing developments on levels above the base protocol of Bitcoin.",
+            "source_name": "The Cryptonomist",
+            "date": "Thu, 04 Jul 2024 03:34:08 -0400",
+            "topics": [],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://cryptoslate.com/trump-could-be-considering-bitcoin-as-a-reserve-asset-to-join-the-softwar-road-to-1-million/",
+            "image_url": "https://crypto.snapi.dev/images/v1/m/v/bitcoin-reserve-asset-516853.jpg",
+            "title": "Trump could be considering Bitcoin as a reserve asset to join the ‘SoftWar' road to $1 million",
+            "text": "Jason Lowery, the author of “SoftWar: A Novel Theory on Power Projection and the National Strategic Significance of Bitcoin,” revealed at the start of June that members of Donald Trump's campaign administration have contacted him regarding his expertise on Bitcoin.",
+            "source_name": "CryptoSlate",
+            "date": "Thu, 04 Jul 2024 03:28:18 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coinmarketcap.com/alexandria/article/bitcoin-below-dollar59k-whats-going-on",
+            "image_url": "https://crypto.snapi.dev/images/v1/6/b/btc9-506563-516858.jpg",
+            "title": "Bitcoin Below $59K: What's Going On?",
+            "text": "Bitcoin slumps as market braces for Mt. Gox repayments and traders face liquidations.",
+            "source_name": "CoinMarketCap",
+            "date": "Thu, 04 Jul 2024 03:27:26 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://thecurrencyanalytics.com/bitcoin/bitcoin-price-analysis-potential-surge-to-78000-hinges-on-breaking-key-resistance-123246",
+            "image_url": "https://crypto.snapi.dev/images/v1/x/c/lun49-506898-516855.jpg",
+            "title": "Bitcoin Price Analysis: Potential Surge to $78,000 Hinges on Breaking Key Resistance",
+            "text": "Bitcoin (BTC) stands at a critical juncture, with analysts predicting a potential surge to $78,000 contingent upon breaking through a pivotal resistance level. Here's a detailed analysis of Bitcoin's current market dynamics, key resistance factors, and influential market sentiments.",
+            "source_name": "The Currency Analytics",
+            "date": "Thu, 04 Jul 2024 03:24:16 -0400",
+            "topics": [
+                "tanalysis",
+                "pricemovement"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://cointelegraph.com/news/bitcoin-price-loses-200-day-trendline-first-time-in-10-months",
+            "image_url": "https://crypto.snapi.dev/images/v1/3/k/btc6-506578-516844.jpg",
+            "title": "Bitcoin price loses its 200-day trendline for first time in 10 months",
+            "text": "Bitcoin drops through $58,000 as analysis highlights ongoing BTC seller interest throughout 2024.",
+            "source_name": "Cointelegraph",
+            "date": "Thu, 04 Jul 2024 03:09:47 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://blockonomi.com/bitcoin-miner-capitulation-a-signal-for-the-next-bull-run/",
+            "image_url": "https://crypto.snapi.dev/images/v1/o/2/bitcoin-mining-environment-516864.jpg",
+            "title": "Bitcoin Miner Capitulation: A Signal for the Next Bull Run?",
+            "text": "Bitcoin miners are showing signs of capitulation with declining hash rates and increased selling pressure, potentially signaling a price bottom",
+            "source_name": "Blockonomi",
+            "date": "Thu, 04 Jul 2024 03:08:42 -0400",
+            "topics": [
+                "mining"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://www.cryptopolitan.com/why-is-bitcoin-down-today-btc-crushes-to-58k/",
+            "image_url": "https://crypto.snapi.dev/images/v1/l/g/bitcoin-1-516840.jpg",
+            "title": "Why is Bitcoin down today? BTC crushes to $58K",
+            "text": "The largest crypto, Bitcoin, dropped below $59,000 on Thursday, marking its lowest point since late April. This decline was driven by concerns over potential selling pressure from the defunct exchange Mt.",
+            "source_name": "Cryptopolitan",
+            "date": "Thu, 04 Jul 2024 03:07:25 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coinpedia.org/news/crypto-market-meltdown-bitcoin-and-altcoins-face-aggressive-liquidations/",
+            "image_url": "https://crypto.snapi.dev/images/v1/o/n/image-75-516838.png",
+            "title": "Crypto Market Meltdown: Bitcoin and Altcoins Face Aggressive Liquidations",
+            "text": "The current price of Bitcoin is $58,854. This means that the largest crypto by market cap has dropped to its lowest point in two months. This is a very serious development when it comes to the crypto market.",
+            "source_name": "CoinPedia",
+            "date": "Thu, 04 Jul 2024 03:04:31 -0400",
+            "topics": [
+                "tanalysis"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://dailyhodl.com/2024/07/04/bitcoin-could-hit-its-cycle-top-in-january-of-2025-predicts-crypto-analyst-kevin-svenson-heres-why/",
+            "image_url": "https://crypto.snapi.dev/images/v1/t/u/january-of-2025jpgw1024-516837.jpg",
+            "title": "Bitcoin Could Hit Its Cycle Top in January of 2025, Predicts Crypto Analyst Kevin Svenson – Here's Why",
+            "text": "Cryptocurrency analyst Kevin Svenson is saying that Bitcoin (BTC) could reach its cycle top within the coming months. Svenson tells his 78,600 YouTube subscribers that based on Bitcoin's post-halving behavior over the previous cycles, BTC could hit its cycle top in roughly six months. “So it's [2012] halving, 40 to 80 weeks profit zone.",
+            "source_name": "The Daily Hodl",
+            "date": "Thu, 04 Jul 2024 03:04:28 -0400",
+            "topics": [],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        },
+        {
+            "news_url": "https://coinpedia.org/news/heres-how-low-bitcoin-price-can-go-top-analyst-weighs-in/",
+            "image_url": "https://crypto.snapi.dev/images/v1/i/7/bitcoin-price-forecast-what-to-expect-in-the-coming-months-516835.webp",
+            "title": "Here's How Low Bitcoin Price Can Go? Top Analyst Weighs In",
+            "text": "The cryptocurrency market continues to face turbulence as Bitcoin's price drops by 3.65% intraday and 14.65% over the past month, reaching $58,830 on July 4. Amidst this ongoing decline, prominent crypto analyst Crypto Patel has forecasted an even steeper drop, citing several bearish indicators that suggest Bitcoin could fall as low as $55,000 soon.",
+            "source_name": "CoinPedia",
+            "date": "Thu, 04 Jul 2024 03:01:01 -0400",
+            "topics": [
+                "pricemovement"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "BTC"
+            ]
+        }
+    ]
+}
