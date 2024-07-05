@@ -188,8 +188,8 @@ const Section2 = () => {
                   <img
                     alt="article-image"
                     loading="lazy"
-                    width="768"
-                    height="432"
+                    // width="768"
+                    // height="432"
                     decoding="async"
                     data-nimg="1"
                     className="w-full h-auto"
