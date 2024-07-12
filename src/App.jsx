@@ -15,11 +15,7 @@ const App = () => {
         <HeaderScroll />
         <Routes>
           <Route exact path="/" element={<MainHome />} />
-          <Route
-            exact
-            path="/news/riot-nominates-bitfarms-board-directors-takeover"
-            element={<ArticalPage />}
-          />
+          <Route exact path="/news/:title" element={<ArticalPage />} />
           {/*<Route path="/home" element={<HomePage />} />     
 
         <Route path="*" element={<Erro />} /> */}

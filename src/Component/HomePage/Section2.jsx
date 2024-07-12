@@ -1,34 +1,92 @@
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaSpinner } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import fackData from "../../Fackdate/News/donationNews.json";
-import { FaSpinner } from "react-icons/fa";
+import axios from "axios";
 
 const Section2 = () => {
-  const [displayText, setDisplayText] = useState("defi");
+  // state
+  const [displayText, setDisplayText] = useState(3);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [blogposts, setBlogposts] = useState([]);
+  const [authors, setAuthors] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  const handleTextClick = (event) => {
-    const buttonText = event.target.textContent;
-    setDisplayText(buttonText);
+  // Fetch authors and categories
+  useEffect(() => {
+    const fetchAuthorsAndCategories = async () => {
+      try {
+        const [authorResponse, categoryResponse] = await Promise.all([
+          axios.get("http://localhost:8080/api/admin/author"),
+          axios.get("http://localhost:8080/api/admin/newsCategory"),
+        ]);
+
+        if (authorResponse.data.Status && categoryResponse.data.Status) {
+          setAuthors(authorResponse.data.Result);
+          setCategories(categoryResponse.data.Result);
+        } else {
+          setErrorMessage("Failed to fetch authors or categories");
+        }
+      } catch (err) {
+        console.error("Error fetching authors or categories:", err);
+      }
+    };
+
+    fetchAuthorsAndCategories();
+  }, []);
+
+  // Fetch blog posts
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/admin/blogpost")
+      .then((result) => {
+        if (result.data.Status) {
+          setBlogposts(result.data.Result);
+        } else {
+          setErrorMessage(result.data.Error);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const handleTextClick = (categoryId) => {
+    setDisplayText(categoryId);
   };
 
   const handleSelectChange = (event) => {
     const selectedText = event.target.value;
-    setDisplayText(selectedText);
+    const selectedNumber = Number(selectedText);
+    setDisplayText(selectedNumber);
   };
 
   useEffect(() => {
     setLoading(true);
-    const matchProduct = fackData.articles.filter(
-      (article) => article.topic.toLowerCase() === displayText.toLowerCase()
+    const matchProduct = blogposts.filter(
+      (article) => article.category_id === displayText
     );
     setArticles(matchProduct.slice(0, 6)); // Limit to 6 articles
     setLoading(false);
-  }, [displayText]);
+  }, [displayText, blogposts]);
 
-  console.log(fackData);
+  const formatDateTime = (dateTime) => {
+    const date = new Date(dateTime);
+    const options = { month: "long", day: "2-digit", year: "numeric" };
+    const formattedDate = date
+      .toLocaleDateString("en-US", options)
+      .toUpperCase();
+    return `${formattedDate}`;
+  };
+
+  const getCategoryName = (categoryId) => {
+    const category = categories.find((cat) => cat.ID === categoryId);
+    return category ? category.name : "";
+  };
+
+  const getAuthorName = (authorId) => {
+    const author = authors.find((auth) => auth.ID === authorId);
+    return author ? author.name : "";
+  };
 
   return (
     <section>
@@ -69,22 +127,15 @@ const Section2 = () => {
               <select
                 id="tabs"
                 name="tabs"
-                className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md"
+                className="block w-full capitalize pl-3 pr-10 py-2 text-base border-gray-500 focus:outline-none focus:ring-[#5637CD] focus:border-[#5637CD] sm:text-sm rounded-md"
                 onChange={handleSelectChange}
                 value={displayText}
               >
-                <option>Markets</option>
-                <option>Finance</option>
-                <option>Policy</option>
-                <option>DeFi</option>
-                <option>Business</option>
-                <option>Web3</option>
-                <option>Opinion</option>
-                <option>People</option>
-                <option>Podcast</option>
-                <option>Sponsored</option>
-                <option>Analysis</option>
-                <option>Education</option>
+                {categories.map((cat) => (
+                  <option key={cat.ID} value={cat.ID}>
+                    {cat.name}
+                  </option>
+                ))}
               </select>
             </div>
             {/* Tablet to desktop device menu bar */}
@@ -94,78 +145,15 @@ const Section2 = () => {
                   className="-mb-px absolute px-8 left-0 right-0 h-18 flex flex-row w-full overflow-x-auto no-scrollbar space-x-1 lg:space-x-6 xl:space-x-10 whitespace-nowrap text-xs md:text-xs lg:text-md xl:text-sm font-medium"
                   aria-label="Tabs"
                 >
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Markets
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Finance
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Policy
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    DeFi
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Business
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Web3
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Opinion
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    People
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Podcast
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Sponsored
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Analysis
-                  </span>
-                  <span
-                    className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
-                    onClick={handleTextClick}
-                  >
-                    Education
-                  </span>
+                  {categories.map((cat) => (
+                    <span
+                      key={cat.ID}
+                      className="border-transparent hover:text-gray-700 hover:border-gray-300 pt-4 pb-6 px-1 border-b-2 cursor-pointer"
+                      onClick={() => handleTextClick(cat.ID)}
+                    >
+                      {cat.name}
+                    </span>
+                  ))}
                 </nav>
               </div>
             </div>
@@ -186,23 +174,20 @@ const Section2 = () => {
               >
                 <Link className="cursor-pointer" to={`/news/${article.slug}`}>
                   <img
-                    alt="article-image"
                     loading="lazy"
                     width="768"
                     height="432"
                     decoding="async"
                     data-nimg="1"
                     className="w-full h-auto"
-                    src={article.media}
-                    // src="https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    src={`http://localhost:8080/Images/${article.thumble}`}
+                    alt={article.thumble}
                     style={{ color: "transparent" }}
                   />
                 </Link>
                 <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-1">
                   <p className="flex whitespace-nowrap overflow-auto scrollbar-hide flex-grow text-[10px] text-left uppercase text-[#5637CD] gap-2">
-                    <Link to={`/category/${article.topic.toLowerCase()}`}>
-                      {article.topic}
-                    </Link>
+                    {getCategoryName(article.category_id)}
                   </p>
                 </div>
                 <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
@@ -215,26 +200,16 @@ const Section2 = () => {
                 </div>
                 <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                   <p className="flex-grow text-xs text-left text-light-gray text-light-gray">
-                    {article.description}
+                    {article.subtitle}
                   </p>
                 </div>
                 <div className="flex flex-wrap justify-start items-start gap-1 text-xs">
                   <div className="flex flex-wrap gap-1 uppercase">
-                    by{" "}
-                    <span>
-                      <Link
-                        className="link-gray"
-                        to={`/author/${article.author
-                          .toLowerCase()
-                          .replace(" ", "-")}`}
-                      >
-                        {article.author}
-                      </Link>
-                    </span>
+                    by <span>{getAuthorName(article.author1_id)}</span>
                     <span> /</span>
                   </div>
                   <div className="flex justify-start items-start relative gap-1 uppercase">
-                    <time>{article.date}</time>
+                    <time>{formatDateTime(article.dateAndTime)}</time>
                   </div>
                 </div>
               </div>

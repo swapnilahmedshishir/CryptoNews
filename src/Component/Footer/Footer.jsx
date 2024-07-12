@@ -9,6 +9,7 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa6";
+import EmailNewsletter from "../Newsletter/EmailNewsletter";
 
 const Footer = () => {
   return (
@@ -36,22 +37,9 @@ const Footer = () => {
                 understand the markets.
               </p>
             </div>
+            {/* news letter  */}
             <div className="flex flex-col w-full">
-              <div className="flex justify-start items-center self-stretch">
-                <div className="self-stretch flex-grow bg-white">
-                  <input type="hidden" name="verification" value="" />
-                  <input
-                    className="flex justify-start items-start w-full text-light-gray focus:text-black border focus:outline-none border-r-0 border-gray-200 focus:border-primary p-2 text-xs"
-                    placeholder="Email address"
-                    value=""
-                  />
-                </div>
-                <button className="flex justify-start items-center gap-1 border border-transparent cursor-pointer border-l-0 bg-violet-600 hover:border-gray-800 hover:bg-gray-700 px-4 py-2 text-xs">
-                  <span className="text-center uppercase text-white">
-                    subscribe
-                  </span>
-                </button>
-              </div>
+              <EmailNewsletter />
             </div>
           </div>
           <div className="flex flex-col justify-center items-start self-stretch flex-grow gap-3 p-10 bg-[#110b29] border-t border-r-0 border-b-0 sm:border-l border-[#b4b4b4]/[0.35]">

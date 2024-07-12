@@ -51,7 +51,7 @@ const CryptoPrice = (props) => {
           </span>
         </Link>
       ) : (
-        <p className="text-xs">Loading...</p>
+        <p className="text-xs hidden">Loading...</p>
       )}
     </>
   );

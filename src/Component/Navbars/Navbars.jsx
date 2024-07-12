@@ -49,7 +49,7 @@ const Navbars = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <NavLink to="/" className="">
-                            <img src="/Tojo- News-Logo-300px.png" alt="logo" />
+                            <img src="/Tojo-News-Logo-300px.png" alt="logo" />
                           </NavLink>
                         </div>
                         <button
