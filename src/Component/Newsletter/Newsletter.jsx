@@ -14,7 +14,7 @@ const Newsletter = () => {
             </div>
             <div className="flex justify-start items-start self-stretch relative gap-2.5">
               <p className="flex-grow text-[22px] text-left">
-                <a href="/newsletter/daily">Blockworks Daily</a>
+                <a href="/newsletter/daily">Tojo News Daily</a>
               </p>
             </div>
             <div className="flex justify-start items-start self-stretch relative gap-2.5">

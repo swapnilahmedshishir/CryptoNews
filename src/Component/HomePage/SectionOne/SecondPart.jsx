@@ -49,7 +49,7 @@ const SecondPart = () => {
             const now = new Date();
             const timeDiff = now - postDate;
             const hoursDiff = timeDiff / (1000 * 60 * 60);
-            return hoursDiff <= 48;
+            return hoursDiff <= 96;
           });
           setBlogposts(filteredPosts);
         } else {

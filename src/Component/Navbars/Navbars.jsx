@@ -42,9 +42,9 @@ const Navbars = () => {
                 >
                   <IoReorderThreeOutline className="text-3xl mx-2 my-1" />
                 </button>
-
+                {/* news small secren  */}
                 <div className={`${isOpen ? "hidden" : "block"}`}>
-                  <div className="absolute md:rounded-lg md:shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 w-80 md:w-96 p-2 -top-4 -left-2 ">
+                  <div className="absolute md:rounded-lg md:shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 w-80 md:w-[390px] p-2 -top-4 -left-4 ">
                     <div className="pt-4 pb-6 px-4 text-xs">
                       <div className="flex items-center justify-between">
                         <div>
@@ -53,7 +53,6 @@ const Navbars = () => {
                           </NavLink>
                         </div>
                         <button
-                          // className="text-black group rounded-md inline-flex items-center font-medium hover:text-gray-900 outline-[#5637CD] "
                           className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
                           type="button"
                           aria-expanded="false"
@@ -63,116 +62,111 @@ const Navbars = () => {
                           <FaXmark className="text-3xl mx-2 my-1" />
                         </button>
                       </div>
+
                       <div className="mt-6 px-1">
                         <nav className="grid grid-cols-2 gap-y-4 gap-x-8 md:gap-x-8">
-                          <a
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/markets"
+                            to="/category/markets"
                           >
                             crypto
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/finance"
+                            to="/category/finance"
                           >
                             Finance
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/policy"
+                            to="/category/policy"
                           >
                             Business
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/business"
+                            to="/category/business"
                           >
                             Analysis
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/defi"
+                            to="/category/defi"
                           >
                             Opinion
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/web3"
+                            to="/category/web3"
                           >
                             Web3
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/people"
+                            to="/category/people"
                           >
                             DeFi
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/opinion"
+                            to="/category/opinion"
                           >
                             People
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/education"
+                            to="/category/education"
                           >
                             Education
-                          </a>
-                          <a
+                          </NavLink>
+                          <NavLink
                             className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            href="/category/sponsored"
+                            to="/category/sponsored"
                           >
                             Sponsored
-                          </a>
+                          </NavLink>
                         </nav>
                       </div>
                     </div>
                     <div className="py-6 px-5 space-y-6 text-xs">
                       <nav className="grid grid-cols-2 gap-y-4 gap-x-8">
-                        <a
+                        <NavLink
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/news"
-                        >
-                          Latest News
-                        </a>
-                        <a
-                          className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/newsletter"
+                          to="/newsletter"
                         >
                           Newsletter
-                        </a>
-                        <a
+                        </NavLink>
+                        <NavLink
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/podcasts"
+                          to="/podcasts"
                         >
                           Podcasts
-                        </a>
+                        </NavLink>
 
-                        <a
+                        <NavLink
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/prices"
+                          to="/prices"
                         >
                           Prices
-                        </a>
-                        <a
+                        </NavLink>
+                        <NavLink
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/events"
+                          to="/events"
                         >
                           Events
-                        </a>
-                        <a
+                        </NavLink>
+                        <NavLink
                           className="p-3 flex items-center rounded-md hover:text-gray-900 font-medium text-gray-900"
-                          href="/roundtables"
+                          to="/roundtables"
                         >
                           Roundtables
-                        </a>
-                        <a
-                          href=""
-                          className="flex items-center font-medium text-gray-900 text-[#5637CD] py-1 px-2 hover:bg-primary hover:text-white"
+                        </NavLink>
+                        <NavLink
+                          to=""
+                          className="flex items-center font-medium text-gray-900 py-1 px-2 hover:bg-primary hover:text-white"
                         >
                           Get Research
-                        </a>
+                        </NavLink>
                       </nav>
                     </div>
                   </div>
@@ -180,17 +174,18 @@ const Navbars = () => {
               </li>
             </ul>
           </div>
+
           {/* News large screen menu bar  */}
           <div className="hidden lg:block">
             <ul className="flex basis-auto uppercase gap-3 relative">
               <NewsNav />
               <li className=" mx-2">
-                <NavLink to="/home" className="">
+                <NavLink to="/newsletters" className="">
                   newsletters
                 </NavLink>
               </li>
               <li className=" mx-2">
-                <NavLink to="/home" className="">
+                <NavLink to="/podcasts" className="">
                   podcasts
                 </NavLink>
               </li>

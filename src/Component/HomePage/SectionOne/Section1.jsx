@@ -14,11 +14,11 @@ const Section1 = () => {
       <div className="xl:basis-1/4 order-3">
         <div className="flex flex-col md:flex-row xl:flex-col border-t border-gray-200 xl:border-0 items-baseline md:items-stretch xl:items-baseline self-stretch">
           <div className="w-full md:w-1/2 xl:w-full flex flex-col md:flex-col-reverse xl:flex-col bg-white border-gray-200 grow border-b md:border-b-0 md:border-t-1 xl:border-t-0 xl:border-b border-r-0">
-            <div className="flex justify-between items-start relative px-10 py-5 border-b border-gray-200 w-full">
-              <p className="text-xs uppercase font-semibold">Key metrics</p>
-            </div>
+            {/* <div className="flex justify-between items-start relative px-10 py-5 border-b border-gray-200 w-full">
+              <p className="text-xs uppercase font-semibold"></p>
+            </div> */}
 
-            <div className="flex flex-col justify-center items-center self-stretch px-10 pt-5 pb-10">
+            {/* <div className="flex flex-col justify-center items-center self-stretch px-10 pt-5 pb-10">
               <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
                 <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
                   <div className="flex justify-start items-center flex-grow h-8 pr-2 max-w-sm">
@@ -149,15 +149,19 @@ const Section1 = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
+            </div> */}
             {/* News Letter Email */}
             <Newsletter />
           </div>
 
           <div className="flex flex-col justify-start self-stretch bg-white border-l xl:border-l-0 md:w-1/2 xl:w-full">
-            <div className="flex flex-col justify-start items-start gap-3 w-full p-10">
+            <div className="flex flex-col justify-start items-start gap-3 w-full p-2 ">
               <div className="flex flex-col justify-start self-stretch gap-2">
+                <div className="border-b border-gray-200 w-full my-5">
+                  <p className="text-2xl uppercase font-semibold text-gray-700">
+                    Watch Market Today
+                  </p>
+                </div>
                 <div className="min-h-[100px]">
                   <a
                     href="https://app.blockworksresearch.com/research/polygon-protocol-governance-call-ppgc-21"
