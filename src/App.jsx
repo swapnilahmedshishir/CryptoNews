@@ -8,6 +8,7 @@ import ArticalPage from "./Component/Artical/ArticalPage";
 import NewsLetterOffer from "./Component/Newsletter/NewsLetterOffer";
 import ProdCast from "./Component/ProdCast/ProdCast";
 import CategoryNews from "./Component/CategoryNews/CategoryNews";
+import Search from "./Component/Search/Search";
 const App = () => {
   return (
     <div className="2xl:mx-6 border-x-2 border-gray-100 ">
@@ -26,6 +27,7 @@ const App = () => {
             path="/category/:categoryName"
             element={<CategoryNews />}
           />
+          <Route exact path="/search" element={<Search />} />
           {/* <Route path="/home" element={<HomePage />} />     
 
         <Route path="*" element={<Erro />} /> */}

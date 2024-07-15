@@ -5,9 +5,10 @@ import {
   FaLinkedin,
   FaTelegram,
   FaSquareInstagram,
-  FaDiscord,
   FaTiktok,
   FaYoutube,
+  FaFacebook,
+  FaPinterest,
 } from "react-icons/fa6";
 import EmailNewsletter from "../Newsletter/EmailNewsletter";
 
@@ -194,7 +195,7 @@ const Footer = () => {
           </div>
           <div className="text-white flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-3">
             <a
-              href="https://twitter.com/"
+              href="https://x.com/TOJONews24"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Twitter"
@@ -202,7 +203,7 @@ const Footer = () => {
               <FaXTwitter className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
             </a>
             <a
-              href="https://www.linkedin.com/company/"
+              href="https://www.linkedin.com/company/tojo-news/"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Linkedin"
@@ -218,24 +219,31 @@ const Footer = () => {
               <FaTelegram className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/tojonews?igsh=ZXdiZ3JvbjBoYjB1"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Instagram"
             >
-              <span className="sr-only">Instagram</span>
               <FaSquareInstagram className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
             </a>
             <a
-              href="https://discord.com/invite/"
+              href="https://www.pinterest.com/tojonews/"
+              target="_blank"
+              rel="noreferrer nofollow"
+              aria-label="Instagram"
+            >
+              <FaPinterest className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61561671656944&mibextid=ZbWKwL"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Discord"
             >
-              <FaDiscord className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
+              <FaFacebook className="flex-grow-0 flex-shrink-0 w-6 h-6 relative" />
             </a>
             <a
-              href="https://www.tiktok.com/"
+              href="https://www.tiktok.com/@tojonewsofficial"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Tiktok"

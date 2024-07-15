@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { FaXmark } from "react-icons/fa6";
 import NewsNav from "./NewsNav";
+import NavMenuItems from "./NavMenuItems";
 
 const Navbars = () => {
   // const [clicked, setClicked] = useState(false);
@@ -64,68 +65,8 @@ const Navbars = () => {
                       </div>
 
                       <div className="mt-6 px-1">
-                        <nav className="grid grid-cols-2 gap-y-4 gap-x-8 md:gap-x-8">
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/markets"
-                          >
-                            crypto
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/finance"
-                          >
-                            Finance
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/policy"
-                          >
-                            Business
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/business"
-                          >
-                            Analysis
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/defi"
-                          >
-                            Opinion
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/web3"
-                          >
-                            Web3
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/people"
-                          >
-                            DeFi
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/opinion"
-                          >
-                            People
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/education"
-                          >
-                            Education
-                          </NavLink>
-                          <NavLink
-                            className="p-3 flex items-center font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                            to="/category/sponsored"
-                          >
-                            Sponsored
-                          </NavLink>
-                        </nav>
+                        {/* Nav menu items  */}
+                        <NavMenuItems />
                       </div>
                     </div>
                     <div className="py-6 px-5 space-y-6 text-xs">
