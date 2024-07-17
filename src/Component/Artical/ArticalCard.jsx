@@ -83,7 +83,7 @@ const ArticleCard = ({ BlogData }) => {
           loading="lazy"
           decoding="async"
           data-nimg="1"
-          className="w-full h-36"
+          className="w-full h-auto"
           src={`http://localhost:8080/Images/${thumble}`}
           alt={thumble}
           style={{ color: "transparent" }}

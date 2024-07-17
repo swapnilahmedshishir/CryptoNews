@@ -10,7 +10,9 @@ import {
   FaFacebook,
   FaPinterest,
 } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 import EmailNewsletter from "../Newsletter/EmailNewsletter";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,7 +30,7 @@ const Footer = () => {
               </div>
               <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
                 <p className="flex-grow text-xl text-left text-white">
-                  Blockworks Daily Newsletter
+                  Tojo News Daily Newsletter
                 </p>
               </div>
             </div>
@@ -48,7 +50,7 @@ const Footer = () => {
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-1">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                   <p className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#f7f7f7]">
-                    blockworks research
+                    Tojo News research
                   </p>
                 </div>
               </div>
@@ -69,7 +71,7 @@ const Footer = () => {
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                     <a
-                      href="https://blockworksresearch.com"
+                      href=""
                       target="_blank"
                       className="flex-grow-0 flex-shrink-0 text-[10px] text-center uppercase text-[#a38bfc]"
                       rel="noreferrer"
@@ -77,27 +79,14 @@ const Footer = () => {
                       subscribe
                     </a>
                   </div>
-                  <svg
-                    width="8"
-                    height="9"
-                    viewBox="0 0 8 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-grow-0 flex-shrink-0"
-                    preserveAspectRatio="xMidYMid meet"
-                  >
-                    <path
-                      d="M4 0.837402L3.295 1.5424L6.085 4.3374H0V5.3374H6.085L3.295 8.1324L4 8.8374L8 4.8374L4 0.837402Z"
-                      fill="#A38BFC"
-                    ></path>
-                  </svg>
+                  <FaArrowRight className="flex-grow-0 flex-shrink-0 text-[#A38BFC] size-3 ml-2" />
                 </div>
               </div>
               <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 gap-4">
                 <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                   <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                     <a
-                      href="https://app.blockworksresearch.com/support"
+                      href=""
                       target="_blank"
                       className="flex-grow-0 flex-shrink-0 text-[10px] text-center uppercase text-[#a38bfc]"
                       rel="noreferrer"
@@ -105,49 +94,30 @@ const Footer = () => {
                       get in touch
                     </a>
                   </div>
-                  <svg
-                    width="8"
-                    height="9"
-                    viewBox="0 0 8 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-grow-0 flex-shrink-0"
-                    preserveAspectRatio="xMidYMid meet"
-                  >
-                    <path
-                      d="M4 0.837402L3.295 1.5424L6.085 4.3374H0V5.3374H6.085L3.295 8.1324L4 8.8374L8 4.8374L4 0.837402Z"
-                      fill="#A38BFC"
-                    ></path>
-                  </svg>
+                  <FaArrowRight className="flex-grow-0 flex-shrink-0 text-[#A38BFC] size-3 ml-1" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-1  lg:grid-cols-2 gap-0 text-white uppercase text-sm md:text-xs lg:text-sm  whitespace-nowrap p-8 md:text-center">
+        <div className="grid grid-cols-2 md:grid-cols-1  lg:grid-cols-2 gap-0 text-white uppercase text-sm md:text-xs lg:text-xs  whitespace-nowrap p-8 md:text-center">
           <div>
             <h5 className="font-bold mb-3 md:hidden">Sections</h5>
             <div className="grid grid-cols-1 md:grid-cols-7 md:mb-6 lg:mb-0 gap-2">
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/news">News</a>
+                <Link to="/podcasts">Podcasts</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/podcasts">Podcasts</a>
+                <Link to="/newsletters">Newsletters</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/newsletter">Newsletters</a>
+                <Link to="/events">Events</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/events">Events</a>
+                <Link to="/roundtables">Roundtables</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/roundtables">Roundtables</a>
-              </div>
-              <div className="grid hover:text-purple-200 w-20">
-                <a href="https://blockworksresearch.com">Research</a>
-              </div>
-              <div className="grid hover:text-purple-200 w-20">
-                <a href="/sitemap">Sitemap</a>
+                <Link to="">Research</Link>
               </div>
             </div>
           </div>
@@ -155,22 +125,22 @@ const Footer = () => {
             <h5 className="font-bold mb-3 md:hidden">Company</h5>
             <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/about">About</a>
+                <Link to="/about">About</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/advertise">Advertise</a>
+                <Link to="/advertise">Advertise</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/careers">Careers</a>
+                <Link to="/careers">Careers</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/trust-ethics">Trust &amp; Ethics</a>
+                <Link to="/trust-ethics">Trust &amp; Ethics</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/privacy-policy">Privacy Policy</a>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </div>
               <div className="grid hover:text-purple-200 w-20">
-                <a href="/contact-us">Contact Us</a>
+                <Link to="/contact-us">Contact Us</Link>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const HeaderScroll = () => {
     $clonedList.classList.add("cloned");
 
     const infinite = new TimelineMax({ repeat: -1, paused: true });
-    const time = 25;
+    const time = 35;
 
     infinite
       .fromTo(

@@ -46,8 +46,15 @@ const CryptoPrice = (props) => {
     <>
       {price ? (
         <Link to={`/price/${symbol.toLowerCase()}`}>
-          <span className={`text-sm ${getPriceStyle()}`}>
-            {symbol} ${price} {PriceParcent}%
+          <span className={`text-sm `}>
+            {symbol} ${price}
+            <span
+              className={`ml-1 ${
+                PriceParcent >= 0 ? "text-green-500" : "text-red-500"
+              }`}
+            >
+              {PriceParcent}%
+            </span>
           </span>
         </Link>
       ) : (

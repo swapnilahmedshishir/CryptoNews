@@ -142,17 +142,17 @@ const Navbars = () => {
             <div className="hidden md:block">
               <ul className="flex basis-auto  uppercase">
                 <li className=" mx-2">
-                  <NavLink to="/home" className="">
+                  <NavLink to="/prices" className="">
                     PRICES
                   </NavLink>
                 </li>
                 <li className=" mx-2">
-                  <NavLink to="/home" className="">
+                  <NavLink to="/events" className="">
                     EVENTS
                   </NavLink>
                 </li>
                 <li className=" mx-2">
-                  <NavLink to="/home" className="">
+                  <NavLink to="/roundtables" className="">
                     ROUNDTABLES
                   </NavLink>
                 </li>
