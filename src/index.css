@@ -1,6 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.form-wrapper .form-fields>div {
+    padding: .5rem;
+    position: relative;
+}
+
+.form-wrapper .form-fields>div>div.name {
+    margin-bottom: .5rem;
+}
+
+.form-wrapper .form-fields .form-field label {
+    display: block;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-bottom: .5rem;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.form-wrapper .form-fields input[type=date], .form-wrapper .form-fields input[type=email], .form-wrapper .form-fields input[type=name], .form-wrapper .form-fields input[type=number], .form-wrapper .form-fields input[type=password], .form-wrapper .form-fields input[type=phone], .form-wrapper .form-fields input[type=search], .form-wrapper .form-fields input[type=text], .form-wrapper .form-fields input[type=time], .form-wrapper .form-fields select {
+    border-radius: 0;
+    border-width: 1px;
+    display: block;
+    width: 100%;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    padding: .5rem .75rem;
+    --tw-shadow: 0 1px 2px 0 #0000000d;
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+
+
+@media (min-width: 640px) {
+    .form-wrapper .form-fields input[type=date], .form-wrapper .form-fields input[type=email], .form-wrapper .form-fields input[type=name], .form-wrapper .form-fields input[type=number], .form-wrapper .form-fields input[type=password], .form-wrapper .form-fields input[type=phone], .form-wrapper .form-fields input[type=search], .form-wrapper .form-fields input[type=text], .form-wrapper .form-fields input[type=time], .form-wrapper .form-fields select {
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+}

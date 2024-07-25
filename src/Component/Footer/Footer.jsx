@@ -133,9 +133,9 @@ const Footer = () => {
               <div className="grid hover:text-purple-200 w-20">
                 <Link to="/careers">Careers</Link>
               </div>
-              <div className="grid hover:text-purple-200 w-20">
+              {/* <div className="grid hover:text-purple-200 w-20">
                 <Link to="/trust-ethics">Trust &amp; Ethics</Link>
-              </div>
+              </div> */}
               <div className="grid hover:text-purple-200 w-20">
                 <Link to="/privacy-policy">Privacy Policy</Link>
               </div>

@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'headline': ['DM Serif Display', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
     },
   },

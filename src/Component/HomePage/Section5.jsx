@@ -43,7 +43,7 @@ const Section5 = () => {
         </div>
       </div>
 
-      <div className="relative w-full md:h-[445pt]">
+      <div className="relative w-full md:h-[460pt]">
         <div className="gap-10 p-10 touch-scroll md:absolute md:left-0 md:right-0 flex flex-col md:flex-row overflow-x-auto px-8 w-full">
           {/* prodcast start */}
           <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
