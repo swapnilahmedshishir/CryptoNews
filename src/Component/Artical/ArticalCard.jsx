@@ -8,6 +8,7 @@ const ArticleCard = ({ BlogData }) => {
   const {
     thumble,
     title,
+    permalink,
     category_id,
     subtitle,
     dateAndTime,
@@ -78,7 +79,14 @@ const ArticleCard = ({ BlogData }) => {
 
   return (
     <div className="flex flex-col justify-start self-stretch flex-grow gap-2 w-full">
-      <Link className="cursor-pointer" to={`/news/${title}`}>
+      <Link
+        className="cursor-pointer"
+        to={
+          permalink
+            ? `/news/${permalink.replaceAll(/ /g, "-").toLowerCase()}`
+            : "/"
+        }
+      >
         <img
           loading="lazy"
           decoding="async"
@@ -97,7 +105,11 @@ const ArticleCard = ({ BlogData }) => {
       <div className="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
         <Link
           className="font-headline flex-grow text-base font-semibold leading-snug hover:text-[#5637CD]"
-          to={`/news/${title}`}
+          to={
+            permalink
+              ? `/news/${permalink.replaceAll(/ /g, "-").toLowerCase()}`
+              : "/"
+          }
         >
           {title}
         </Link>
@@ -125,6 +137,7 @@ ArticleCard.propTypes = {
   BlogData: PropTypes.shape({
     thumble: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    permalink: PropTypes.string.isRequired,
     category_id: PropTypes.number.isRequired,
     subtitle: PropTypes.string,
     dateAndTime: PropTypes.string.isRequired,

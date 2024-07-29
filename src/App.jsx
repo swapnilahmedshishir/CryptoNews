@@ -16,6 +16,7 @@ import Advertise from "./Component/Advertise/Advertise";
 import Careers from "./Component/Careers/Careers";
 import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy";
 import { ContactUs } from "./Component/ContactUs/ContactUs";
+import { Audio } from "./Component/Audio/Audio";
 const App = () => {
   return (
     <div className="2xl:mx-6 border-x-2 border-gray-100 ">
@@ -44,6 +45,7 @@ const App = () => {
           <Route exact path="/contact-us" element={<ContactUs />} />
           {/* <Route path="*" element={<Erro />} /> */}
         </Routes>
+        {/* <Audio /> */}
         <Footer />
       </Router>
     </div>

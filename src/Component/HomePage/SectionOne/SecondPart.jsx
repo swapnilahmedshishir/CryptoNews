@@ -115,14 +115,23 @@ const SecondPart = () => {
               <div className="flex flex-col justify-start items-start self-stretch gap-2">
                 <div className="flex justify-start items-center relative gap-1">
                   <p>
-                    <Link to="/" className="text-[#5637CD] text-xs uppercase">
+                    <Link
+                      to={`/category/${featureOnePost.category}`}
+                      className="text-[#5637CD] text-xs uppercase"
+                    >
                       {featureOnePost.category}
                     </Link>
                   </p>
                 </div>
                 <div className="gap-2.5 font-headline">
                   <Link
-                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    to={
+                      featureOnePost.permalink
+                        ? `/news/${featureOnePost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                     className="flex-grow text-2xl md:text-3xl xl:text-4xl leading-snug hover:text-[#5637CD]"
                   >
                     {featureOnePost.title}
@@ -153,7 +162,13 @@ const SecondPart = () => {
                 </div>
                 <div className="mt-0.5 w-full">
                   <Link
-                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    to={
+                      featureOnePost.permalink
+                        ? `/news/${featureOnePost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                     className="cursor-pointer"
                   >
                     <img
@@ -182,7 +197,7 @@ const SecondPart = () => {
                   <p className="flex gap-2 flex-grow">
                     <Link
                       className="text-[#5637CD] text-xs uppercase"
-                      to="/category/business"
+                      to={`/category/${featureTwoPost.category}`}
                     >
                       {featureTwoPost.category}
                     </Link>
@@ -191,7 +206,13 @@ const SecondPart = () => {
                 <div className="mt-1 gap-2.5">
                   <Link
                     className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
-                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    to={
+                      featureTwoPost.permalink
+                        ? `/news/${featureTwoPost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                   >
                     {featureTwoPost.title}
                   </Link>
@@ -229,7 +250,7 @@ const SecondPart = () => {
                   <p className="flex gap-2 flex-grow">
                     <Link
                       className="text-[#5637CD] text-xs uppercase"
-                      to="/category/business"
+                      to={`/category/${featureThreePost.category}`}
                     >
                       {featureThreePost.category}
                     </Link>
@@ -238,7 +259,13 @@ const SecondPart = () => {
                 <div className="mt-1 gap-2.5">
                   <Link
                     className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
-                    to="/news/riot-nominates-bitfarms-board-directors-takeover"
+                    to={
+                      featureThreePost.permalink
+                        ? `/news/${featureThreePost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                   >
                     {featureThreePost.title}
                   </Link>
@@ -274,7 +301,13 @@ const SecondPart = () => {
               <div className="justify-start items-center flex-grow gap-2 w-full">
                 <Link
                   className="cursor-pointer"
-                  to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
+                  to={
+                    featureFourPost.permalink
+                      ? `/news/${featureFourPost.permalink
+                          .replaceAll(/ /g, "-")
+                          .toLowerCase()}`
+                      : "/"
+                  }
                 >
                   <img
                     alt="article-image"
@@ -292,7 +325,7 @@ const SecondPart = () => {
                   <p className="flex gap-2 flex-grow">
                     <Link
                       className="text-[#5637CD] text-xs uppercase"
-                      to="/category/analysis"
+                      to={`/category/${featureFourPost.category}`}
                     >
                       {featureFourPost.category}
                     </Link>
@@ -301,7 +334,13 @@ const SecondPart = () => {
                 <div className="mt-1 gap-2.5">
                   <Link
                     className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
-                    to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
+                    to={
+                      featureFourPost.permalink
+                        ? `/news/${featureFourPost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                   >
                     {featureFourPost.title}
                   </Link>
@@ -338,7 +377,13 @@ const SecondPart = () => {
               <div className="justify-start items-center flex-grow gap-2 w-full">
                 <Link
                   className="cursor-pointer"
-                  to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
+                  to={
+                    featureFivePost.permalink
+                      ? `/news/${featureFivePost.permalink
+                          .replaceAll(/ /g, "-")
+                          .toLowerCase()}`
+                      : "/"
+                  }
                 >
                   <img
                     alt="article-image"
@@ -356,7 +401,7 @@ const SecondPart = () => {
                   <p className="flex gap-2 flex-grow">
                     <Link
                       className="text-[#5637CD] text-xs uppercase"
-                      to="/category/analysis"
+                      to={`/category/${featureFivePost.category}`}
                     >
                       {featureFivePost.category}
                     </Link>
@@ -365,7 +410,13 @@ const SecondPart = () => {
                 <div className="mt-1 gap-2.5">
                   <Link
                     className="flex-grow text-lg md:text-xl xl:text-2xl font-headline hover:text-[#5637CD]"
-                    to="/news/lightspeed-newsletter-solana-permissioned-environments-institutions"
+                    to={
+                      featureFivePost.permalink
+                        ? `/news/${featureFivePost.permalink
+                            .replaceAll(/ /g, "-")
+                            .toLowerCase()}`
+                        : "/"
+                    }
                   >
                     {featureFivePost.title}
                   </Link>

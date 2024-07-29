@@ -33,7 +33,7 @@ const Navbars = () => {
           {/* colpace button */}
           <div className="block lg:hidden relative z-10">
             <ul className="flex basis-auto uppercase gap-3">
-              <li className="" onClick={() => setIsOpen(!isOpen)}>
+              <li onClick={() => setIsOpen(!isOpen)}>
                 <button
                   className="text-black group rounded-md inline-flex items-center font-medium hover:text-gray-900 outline-none focus:outline-[#5637CD]"
                   type="button"
@@ -49,7 +49,7 @@ const Navbars = () => {
                     <div className="pt-4 pb-6 px-4 text-xs">
                       <div className="flex items-center justify-between">
                         <div>
-                          <NavLink to="/" className="">
+                          <NavLink to="/">
                             <img src="/Tojo-News-Logo-300px.png" alt="logo" />
                           </NavLink>
                         </div>
@@ -120,21 +120,17 @@ const Navbars = () => {
           <div className="hidden lg:block">
             <ul className="flex basis-auto uppercase gap-3 relative">
               <NewsNav />
-              <li className=" mx-2">
-                <NavLink to="/newsletters" className="">
-                  newsletters
-                </NavLink>
+              <li className="mx-2">
+                <NavLink to="/newsletters">newsletters</NavLink>
               </li>
               <li className=" mx-2">
-                <NavLink to="/podcasts" className="">
-                  podcasts
-                </NavLink>
+                <NavLink to="/podcasts">podcasts</NavLink>
               </li>
             </ul>
           </div>
 
           <div className="pr-28 lg:pr-1">
-            <NavLink to="/" className="">
+            <NavLink to="/">
               <img src="/Tojo-News-Logo-150px.png" alt="logo" />
             </NavLink>
           </div>
@@ -142,19 +138,13 @@ const Navbars = () => {
             <div className="hidden md:block">
               <ul className="flex basis-auto  uppercase">
                 <li className=" mx-2">
-                  <NavLink to="/prices" className="">
-                    PRICES
-                  </NavLink>
+                  <NavLink to="/prices">PRICES</NavLink>
                 </li>
                 <li className=" mx-2">
-                  <NavLink to="/events" className="">
-                    EVENTS
-                  </NavLink>
+                  <NavLink to="/events">EVENTS</NavLink>
                 </li>
                 <li className=" mx-2">
-                  <NavLink to="/roundtables" className="">
-                    ROUNDTABLES
-                  </NavLink>
+                  <NavLink to="/roundtables">ROUNDTABLES</NavLink>
                 </li>
                 <li></li>
               </ul>
@@ -175,7 +165,7 @@ const Navbars = () => {
                     <GoSearch className="ml-3 text-2xl" />
                   </span>
                 </button>
-              </NavLink>{" "}
+              </NavLink>
             </div>
           </div>
         </div>

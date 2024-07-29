@@ -55,7 +55,7 @@ const ArticalPage = () => {
   useEffect(() => {
     const sanitizedTitle = title.replaceAll(/-/g, " ").toLowerCase();
     const matchItems = blogpost.filter(
-      (art) => art.title.toLowerCase() === sanitizedTitle
+      (art) => art.permalink.toLowerCase() === sanitizedTitle
     );
     setPost(matchItems);
   }, [blogpost, title]);

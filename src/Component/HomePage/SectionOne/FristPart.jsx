@@ -57,11 +57,11 @@ const FristPart = () => {
                 <div className="flex items-center w-11/12">
                   <Link
                     to={
-                      blog.title
-                        ? `/news/${blog.title
+                      blog.permalink
+                        ? `/news/${blog.permalink
                             .replaceAll(/ /g, "-")
                             .toLowerCase()}`
-                        : "/fallback-url"
+                        : "/"
                     }
                   >
                     <span className="text-sm font-semibold font-headline visited:text-gray-700 hover:text-[#5637CD] whitespace-normal">
