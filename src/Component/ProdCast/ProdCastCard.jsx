@@ -2,52 +2,57 @@ import React from "react";
 import { FaSpotify } from "react-icons/fa6";
 import { SiApplepodcasts } from "react-icons/si";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useContext } from "react";
+import { AppContext } from "../../AppContext";
 
-const ProdCastCard = () => {
+const ProdCastCard = ({ prodCastCard }) => {
+  const { state } = useContext(AppContext);
+
+  if (!prodCastCard) {
+    return null; // or return some fallback UI
+  }
+
   return (
     <>
-      <div>
+      <div className="shrink-0 grow-0 flex-none border min-w-[100px]">
         <div className="w-full overflow-hidden">
-          <a href="/podcast/0xresearch">
+          <Link
+            to={`/podcasts/${prodCastCard.ID}/${prodCastCard.name
+              .replaceAll(/ /g, "")
+              .toLowerCase()}`}
+          >
             <img
-              alt="0xResearch"
+              alt={prodCastCard.name}
               loading="lazy"
               width="300"
               height="300"
               decoding="async"
               data-nimg="1"
               className="w-full object-cover"
-              srcSet=""
-              src="https://images.pexels.com/photos/765139/pexels-photo-765139.jpeg?auto=compress&cs=tinysrgb&w=400"
+              src={`${state.port}/Images/${prodCastCard.image}`}
               style={{ color: "transparent" }}
             />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="gap-4 p-5">
         <div className="gap-6">
           <div className="gap-2">
             <div className="flex justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
-              <a
+              <Link
                 className="py-1.5 font-semibold text-xl text-left text-dark hover:text-[#5637CD]"
-                href="/podcast/0xresearch"
+                to={`/podcasts/${prodCastCard.ID}/${prodCastCard.name
+                  .replaceAll(/ /g, "")
+                  .toLowerCase()}`}
               >
-                0xResearch
-              </a>
+                {prodCastCard.name}
+              </Link>
             </div>
             <div className="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
               <div className="flex-grow text-sm font-thin text-left text-light-gray">
-                <p>
-                  0xResearch is the show for those who want to step up their
-                  game and think like a crypto analyst. We bring on crypto's
-                  best to uncover the latest research, explore protocol
-                  developments and identify new narratives. We are full-time
-                  crypto analysts who read white papers, governance forums and
-                  research pieces for fun (normal, right?). Join us as we
-                  combine crypto's top talent with our countless hours of
-                  research to create the best content in the space.&nbsp;
-                </p>
+                <p>{prodCastCard.hostedInfo}</p>
               </div>
             </div>
           </div>
@@ -60,18 +65,18 @@ const ProdCastCard = () => {
               </div>
               <div className="flex justify-start items-end flex-grow-0 flex-shrink-0 relative gap-2">
                 <a
-                  href="https://open.spotify.com/show/0rGocvZ7oZR6vuy0UHKAON"
+                  href={prodCastCard.spotify}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Follow 0xResearch on Spotify"
+                  aria-label={`Follow ${prodCastCard.name} on Spotify`}
                 >
                   <FaSpotify className="flex-grow-0 flex-shrink-0 w-3 h-3 relative text-gray-500 hover:text-gray-950" />
                 </a>
                 <a
-                  href="https://podcasts.apple.com/us/podcast/0xresearch/id1651683074"
+                  href={prodCastCard.apple}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Follow 0xResearch on iTunes"
+                  aria-label={`Follow ${prodCastCard.name} on iTunes`}
                 >
                   <SiApplepodcasts className="flex-grow-0 flex-shrink-0 w-[10.83px] h-3 relative text-gray-500 hover:text-gray-950" />
                 </a>
@@ -81,8 +86,10 @@ const ProdCastCard = () => {
               <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
                 <Link
                   className="flex-grow-0 flex-shrink-0 text-[10px] text-left uppercase text-[#5637CD] hover:text-gray-500"
-                  aria-label="All 0xResearch Episodes"
-                  to="/podcast/0xresearch"
+                  aria-label={`All ${prodCastCard.name} Episodes`}
+                  to={`/podcasts/${prodCastCard.ID}/${prodCastCard.name
+                    .replaceAll(/ /g, "")
+                    .toLowerCase()}`}
                 >
                   all episodes
                 </Link>
@@ -94,6 +101,17 @@ const ProdCastCard = () => {
       </div>
     </>
   );
+};
+
+ProdCastCard.propTypes = {
+  prodCastCard: PropTypes.shape({
+    ID: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string.isRequired,
+    hostedInfo: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    spotify: PropTypes.string.isRequired,
+    apple: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ProdCastCard;
