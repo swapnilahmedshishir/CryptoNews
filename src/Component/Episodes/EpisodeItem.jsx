@@ -84,7 +84,7 @@ const EpisodeItem = () => {
               The Modular Integration Spectrum | Keone &amp; Zon
             </p>
             <a
-              className="flex items-center text-sm font-bold leading-6 text-primary hover:text-gray-700 active:text-gray-900 cursor-pointer"
+              className="flex items-center text-sm font-bold leading-6 text-[#5637CD] hover:text-gray-700 active:text-gray-900 cursor-pointer"
               aria-label="Play episode The Modular Integration Spectrum | Keone &amp; Zon"
             >
               <svg

@@ -1,9 +1,16 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import { AppContext } from "../../AppContext";
+import { Link } from "react-router-dom";
 
-const EpisodesItems = ({ episode }) => {
-  const { setAudioFile, state } = useContext(AppContext);
+const EpisodesItems = ({ episode, author }) => {
+  const {
+    setAudioFile,
+    isPlaying,
+    setIsPlaying,
+    currentEpisodeId,
+    setCurrentEpisodeId,
+  } = useContext(AppContext);
 
   const formatDateTime = (dateTime) => {
     const date = new Date(dateTime);
@@ -12,8 +19,33 @@ const EpisodesItems = ({ episode }) => {
   };
 
   const handleListenClick = () => {
-    // setAudioFile(`${state.port}/Audio/${episode.audioFile}`);
-    setAudioFile(`${episode.audioFile}`);
+    const audio = document.querySelector("audio");
+
+    if (currentEpisodeId === episode.uuid) {
+      // Pause current episode
+      if (audio.paused) {
+        audio.play();
+        setIsPlaying(true);
+      } else {
+        audio.pause();
+        setIsPlaying(false);
+      }
+    } else {
+      // Play new episode
+      setAudioFile(episode.audioFile);
+      setCurrentEpisodeId(episode.uuid);
+      setIsPlaying(true);
+      if (audio) {
+        audio.pause();
+      }
+      // Wait for audio file to load, then play
+      setTimeout(() => {
+        const newAudio = document.querySelector("audio");
+        if (newAudio) {
+          newAudio.play();
+        }
+      }, 0);
+    }
   };
 
   return (
@@ -29,12 +61,12 @@ const EpisodesItems = ({ episode }) => {
                 id={`episode-${episode.uuid}-title`}
                 className="mt-2 text-lg font-bold text-slate-900"
               >
-                <a
-                  className="hover:text-primary"
-                  href={`/podcast/bitcoinbuilders/${episode.uuid}`}
+                <Link
+                  className="hover:text-[#5637CD]"
+                  to={`/podcast/${author}/${episode.uuid}`}
                 >
                   <span>{episode.title}</span>
-                </a>
+                </Link>
               </h2>
               <time className="order-first font-mono text-sm leading-7 text-slate-500">
                 {formatDateTime(episode.dateAndTime)}
@@ -44,20 +76,30 @@ const EpisodesItems = ({ episode }) => {
               </div>
               <div className="mt-4 flex items-center gap-4">
                 <a
-                  className="flex items-center text-sm font-bold leading-6 text-primary hover:text-gray-700 active:text-gray-900 cursor-pointer"
-                  aria-label={`Play episode ${episode.title}`}
+                  className="flex items-center text-sm font-bold leading-6 text-[#5637CD] hover:text-gray-700 active:text-gray-900 cursor-pointer"
+                  aria-label={
+                    currentEpisodeId === episode.uuid && isPlaying
+                      ? "Pause"
+                      : "Play"
+                  }
                   onClick={handleListenClick}
                 >
+                  <div className="absolute -inset-4 md:hidden"></div>
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 10 10"
-                    fill="none"
-                    className="h-2.5 w-2.5 fill-current"
+                    viewBox="0 0 24 24"
+                    className="h-8 w-8 fill-slate-500 group-hover:fill-slate-700"
                   >
-                    <path d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z"></path>
+                    {currentEpisodeId === episode.uuid && isPlaying ? (
+                      <path d="M9 6H12V18H9V6ZM13 6H16V18H13V6Z"></path>
+                    ) : (
+                      <path d="M17 12L7 18V6L17 12Z"></path>
+                    )}
                   </svg>
                   <span className="ml-3" aria-hidden="true">
-                    Listen
+                    {currentEpisodeId === episode.uuid && isPlaying
+                      ? "Pause"
+                      : "Play"}
                   </span>
                 </a>
               </div>
@@ -79,6 +121,7 @@ EpisodesItems.propTypes = {
     dateAndTime: PropTypes.string.isRequired,
     uuid: PropTypes.string.isRequired,
   }).isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default EpisodesItems;

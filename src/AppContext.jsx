@@ -1,5 +1,4 @@
-// AppContext.jsx
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
 // Create the context
@@ -7,10 +6,23 @@ export const AppContext = createContext();
 
 // Create a provider component
 export const AppProvider = ({ children }) => {
-  const [state, setState] = useState({ port: "http://localhost:8080" });
+  const [state] = useState({ port: "http://localhost:8080" });
   const [audioFile, setAudioFile] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentEpisodeId, setCurrentEpisodeId] = useState(null);
+
   return (
-    <AppContext.Provider value={{ state, setState, audioFile, setAudioFile }}>
+    <AppContext.Provider
+      value={{
+        state,
+        audioFile,
+        setAudioFile,
+        isPlaying,
+        setIsPlaying,
+        currentEpisodeId,
+        setCurrentEpisodeId,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

@@ -7,7 +7,7 @@ import axios from "axios";
 import { AppContext } from "../../AppContext";
 
 const Episodes = () => {
-  const { id } = useParams();
+  const { id, author } = useParams();
   const { state } = useContext(AppContext);
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -15,6 +15,7 @@ const Episodes = () => {
   const [episodes, setEpisodes] = useState([]);
   const [filteredEpisodes, setFilteredEpisodes] = useState([]);
   const [filteredPodcast, setFilteredPodcast] = useState(null);
+  const [displayCount, setDisplayCount] = useState(7);
 
   useEffect(() => {
     axios
@@ -52,6 +53,10 @@ const Episodes = () => {
       setFilteredEpisodes(episodesForPodcast);
     }
   }, [id, podcasts, episodes]);
+
+  const handleLoadMore = () => {
+    setDisplayCount((prevCount) => prevCount + 7);
+  };
 
   return (
     <main className="border-gray-200 relative w-full">
@@ -214,26 +219,38 @@ const Episodes = () => {
                 </div>
               </div>
               <div className="divide-y divide-slate-100 sm:pt-4 lg:pt-5 lg:border-t">
+                <span>{errorMessage}</span>
                 {filteredEpisodes.length > 0 ? (
-                  filteredEpisodes.map((episode) => (
-                    <EpisodesItems key={episode.ID} episode={episode} />
-                  ))
+                  filteredEpisodes
+                    .slice(0, displayCount)
+                    .map((episode) => (
+                      <EpisodesItems
+                        key={episode.ID}
+                        episode={episode}
+                        author={author}
+                      />
+                    ))
                 ) : (
                   <p className="px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
                     No episodes found.
                   </p>
                 )}
-                <div className="lg:px-8 py-12 px-2 xl:px-0">
-                  <div className="w-full lg:max-w-4xl">
-                    <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
-                      <button className="relative flex justify-center items-center hover:text-white gap-2 px-5 py-4 text-primary hover:bg-primary hover:border-primary border bg-white">
-                        <p className="text-sm text-center uppercase">
-                          load more
-                        </p>
-                      </button>
+                {displayCount < filteredEpisodes.length && (
+                  <div className="lg:px-8 py-12 px-2 xl:px-0">
+                    <div className="w-full lg:max-w-4xl">
+                      <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
+                        <button
+                          onClick={handleLoadMore}
+                          className="relative flex justify-center items-center hover:text-white gap-2 px-5 py-4 text-[#5637CD] hover:bg-[#5637CD] hover:border-[#5637CD] border bg-white"
+                        >
+                          <p className="text-sm text-center uppercase">
+                            load more
+                          </p>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

@@ -4,15 +4,20 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export const Audio = () => {
-  const { state, audioFile } = useContext(AppContext);
+  const {
+    state,
+    audioFile,
+    setAudioFile,
+    isPlaying,
+    setIsPlaying,
+    setCurrentEpisodeId,
+  } = useContext(AppContext);
   const audioRef = useRef(null);
-  console.log(audioRef);
 
   // state
   const [errorMessage, setErrorMessage] = useState(null);
   const [Episodes, setEpisodes] = useState([]);
   const [filteredEpisodes, setFilteredEpisodes] = useState({});
-  const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
@@ -42,27 +47,30 @@ export const Audio = () => {
     }
   }, [audioFile, Episodes]);
 
-  // set audioref to updateTime and duration
+  // Set audioRef to updateTime and duration
   useEffect(() => {
     const audio = audioRef.current;
 
-    if (audio) {
-      audio.addEventListener("timeupdate", () => {
-        setCurrentTime(audio.currentTime);
-      });
+    const updateCurrentTime = () => {
+      setCurrentTime(audio.currentTime);
+    };
 
-      audio.addEventListener("loadedmetadata", () => {
-        setDuration(audio.duration);
-      });
+    const updateDuration = () => {
+      setDuration(audio.duration);
+    };
+
+    if (audio) {
+      audio.addEventListener("timeupdate", updateCurrentTime);
+      audio.addEventListener("loadedmetadata", updateDuration);
     }
 
     return () => {
       if (audio) {
-        audio.removeEventListener("timeupdate", () => {});
-        audio.removeEventListener("loadedmetadata", () => {});
+        audio.removeEventListener("timeupdate", updateCurrentTime);
+        audio.removeEventListener("loadedmetadata", updateDuration);
       }
     };
-  }, []);
+  }, [audioFile]);
 
   //audio play and pause
   const togglePlayPause = () => {
@@ -106,8 +114,15 @@ export const Audio = () => {
   return (
     <>
       <div className="fixed bottom-0 z-10 left-0 right-0">
+        <div>{errorMessage}</div>
         <div className="flex relative items-center gap-6 bg-white/80 py-1 px-4 border border-l-0 border-r-0 backdrop-blur-sm md:px-6 mx-auto w-full">
-          <button className="absolute text-xs flex items-center align-middle right-2 top-2 rounded-md p-1 text-slate-500 hover:bg-slate-100 hover:text-slate-700">
+          <button
+            className="absolute text-xs flex items-center align-middle right-2 top-2 rounded-md p-1 text-slate-500 hover:bg-slate-100 hover:text-slate-700 "
+            onClick={() => {
+              setAudioFile(null);
+              setCurrentEpisodeId(null);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -205,10 +220,9 @@ export const Audio = () => {
                     <path d="M8 5L5 8M5 8L8 11M5 8H13.5C16.5376 8 19 10.4624 19 13.5C19 15.4826 18.148 17.2202 17 18.188"></path>
                     <path d="M5 15V19"></path>
                     <path d="M8 18V16C8 15.4477 8.44772 15 9 15H10C10.5523 15 11 15.4477 11 16V18C11 18.5523 10.5523 19 10 19H9C8.44772 19 8 18.5523 8 18Z"></path>
-
-                    {/* <path d="M8 5L5 8M5 8L8 11M5 8H10.5C13.8137 8 16.5 10.6863 16.5 14C16.5 17.3137 13.8137 20 10.5 20H9"></path> */}
                   </svg>
                 </button>
+
                 <button
                   type="button"
                   className="group relative rounded-full focus:outline-none"
@@ -228,6 +242,7 @@ export const Audio = () => {
                     )}
                   </svg>
                 </button>
+
                 <button
                   type="button"
                   className="group relative rounded-full focus:outline-none"
@@ -296,15 +311,22 @@ export const Audio = () => {
                 <input
                   type="range"
                   min="0"
-                  max={duration}
-                  step="1"
+                  max={duration || 0}
+                  step="any"
                   value={currentTime}
                   onChange={(e) => {
                     const newTime = Number(e.target.value);
                     setCurrentTime(newTime);
                     audioRef.current.currentTime = newTime;
                   }}
-                  className="h-2 w-full flex-grow appearance-none cursor-pointer"
+                  className="h-2 w-full flex-grow appearance-none cursor-pointer range-slider"
+                  style={{
+                    background: `linear-gradient(to right,var(--range-filled-color) ${
+                      (currentTime / duration) * 100
+                    }%,var(--range-track-color) ${
+                      (currentTime / duration) * 100
+                    }%)`,
+                  }}
                 />
               </div>
               <div className="flex items-center justify-center md:order-none">
@@ -314,31 +336,39 @@ export const Audio = () => {
               </div>
             </div>
             <div className="relative flex items-center justify-between md:order-none">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3 pt-1">
                 <button
                   type="button"
-                  className="group relative flex items-center justify-center text-xs font-medium leading-6 text-slate-500 hover:text-slate-700"
+                  className={`group relative flex items-center justify-center text-xs font-semibold p-1  focus:outline-none  focus:ring-slate-400 focus:ring-offset-2 ${
+                    playbackRate === 0.5 ? "bg-slate-500 text-white" : ""
+                  }`}
                   onClick={() => handlePlaybackRateChange(0.5)}
                 >
                   0.5x
                 </button>
                 <button
                   type="button"
-                  className="group relative flex items-center justify-center text-xs font-medium leading-6 text-slate-500 hover:text-slate-700"
+                  className={`group relative flex items-center justify-center text-xs font-semibold p-1  focus:outline-none  focus:ring-slate-400 focus:ring-offset-2 ${
+                    playbackRate === 1 ? "bg-slate-500 text-white" : ""
+                  }`}
                   onClick={() => handlePlaybackRateChange(1)}
                 >
                   1x
                 </button>
                 <button
                   type="button"
-                  className="group relative flex items-center justify-center text-xs font-medium leading-6 text-slate-500 hover:text-slate-700"
+                  className={`group relative flex items-center justify-center text-xs font-semibold p-1  focus:outline-none  focus:ring-slate-400 focus:ring-offset-2 ${
+                    playbackRate === 1.5 ? "bg-slate-500 text-white" : ""
+                  }`}
                   onClick={() => handlePlaybackRateChange(1.5)}
                 >
                   1.5x
                 </button>
                 <button
                   type="button"
-                  className="group relative flex items-center justify-center text-xs font-medium leading-6 text-slate-500 hover:text-slate-700"
+                  className={`group relative flex items-center justify-center text-xs font-semibold p-1  focus:outline-none  focus:ring-slate-400 focus:ring-offset-2 ${
+                    playbackRate === 2 ? "bg-slate-500 text-white" : ""
+                  }`}
                   onClick={() => handlePlaybackRateChange(2)}
                 >
                   2x
@@ -348,7 +378,11 @@ export const Audio = () => {
           </div>
         </div>
       </div>
-      <audio ref={audioRef} src={`${state.port}/Audio/${audioFile}`} />
+      <audio
+        ref={audioRef}
+        src={`${state.port}/Audio/${audioFile}`}
+        onLoadedMetadata={() => setDuration(audioRef.current.duration)}
+      />
     </>
   );
 };
