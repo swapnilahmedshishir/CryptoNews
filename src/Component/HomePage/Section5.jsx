@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProdCastCard from "../ProdCast/ProdCastCard";
+import { useContext } from "react";
+import { AppContext } from "../../AppContext";
+import axios from "axios";
 
 const Section5 = () => {
+  const { state } = useContext(AppContext);
+
+  // state
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [Podcasts, setPodcasts] = useState([]);
+
+  // fetch data
+  useEffect(() => {
+    axios
+      .get(`${state.port}/api/admin/Podcasts`)
+      .then((result) => {
+        if (result.data.Status) {
+          setPodcasts(result.data.Result);
+        } else {
+          setErrorMessage(result.data.Error);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, [state.port]);
+
+  console.log(Podcasts);
+
   return (
     <section>
       <div className="md:mt-0 md:flex md:justify-between md:items-center w-full px-10 py-5 border-b border-t">
@@ -46,21 +71,15 @@ const Section5 = () => {
       <div className="relative w-full md:h-[460pt]">
         <div className="gap-10 p-10 touch-scroll md:absolute md:left-0 md:right-0 flex flex-col md:flex-row overflow-x-auto px-8 w-full">
           {/* prodcast start */}
-          <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
-            <ProdCastCard />
-          </div>
-          <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
-            <ProdCastCard />
-          </div>
-          <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
-            <ProdCastCard />
-          </div>
-          <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
-            <ProdCastCard />
-          </div>
-          <div className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72">
-            <ProdCastCard />
-          </div>
+          {Podcasts.length > 0 &&
+            Podcasts.map((pd) => (
+              <div
+                className="shrink-0 grow-0 flex-none border min-w-[100px] md:w-72"
+                key={pd.ID}
+              >
+                <ProdCastCard prodCastCard={pd} />
+              </div>
+            ))}
           {/* prodcast End  */}
         </div>
       </div>

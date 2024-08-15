@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import ArticleCard from "../Artical/ArticalCard";
+import { AppContext } from "../../AppContext";
 
 const Search = () => {
+  const { state } = useContext(AppContext);
   // State for blog posts, search query, loading, and error message
   const [blogposts, setBlogposts] = useState([]);
   const [search, setSearch] = useState("");
@@ -15,8 +17,8 @@ const Search = () => {
       setLoading(true);
       setErrorMessage(null);
       const url = query
-        ? `http://localhost:8080/api/admin/blogpost?title=${query}`
-        : "http://localhost:8080/api/admin/blogpost";
+        ? `${state.port}/api/admin/blogpost?title=${query}`
+        : `${state.port}/api/admin/blogpost`;
       const result = await axios.get(url);
 
       if (result.data.Status) {

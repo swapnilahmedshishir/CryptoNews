@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { AppContext } from "../../../AppContext";
 
 const SecondPart = () => {
+  const { state } = useContext(AppContext);
   // state
   const [errorMessage, setErrorMessage] = useState(null);
   const [blogposts, setBlogposts] = useState([]);
@@ -19,8 +21,8 @@ const SecondPart = () => {
     const fetchAuthorsAndCategories = async () => {
       try {
         const [authorResponse, categoryResponse] = await Promise.all([
-          axios.get("http://localhost:8080/api/admin/author"),
-          axios.get("http://localhost:8080/api/admin/newsCategory"),
+          axios.get(`${state.port}/api/admin/author`),
+          axios.get(`${state.port}/api/admin/newsCategory`),
         ]);
 
         if (authorResponse.data.Status && categoryResponse.data.Status) {
@@ -40,7 +42,7 @@ const SecondPart = () => {
   // Fetch blog posts
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/admin/blogpost")
+      .get(`${state.port}/api/admin/blogpost`)
       .then((result) => {
         if (result.data.Status) {
           const posts = result.data.Result;
@@ -181,7 +183,7 @@ const SecondPart = () => {
                       className="w-full h-auto"
                       loading="lazy"
                       style={{ color: "transparent" }}
-                      src={`http://localhost:8080/Images/${featureOnePost.thumble}`}
+                      src={`${state.port}/Images/${featureOnePost.thumble}`}
                       srcSet=""
                     />
                   </Link>
@@ -318,7 +320,7 @@ const SecondPart = () => {
                     data-nimg="1"
                     className="w-full h-auto mb-2"
                     style={{ color: "transparent" }}
-                    src={`http://localhost:8080/Images/${featureFourPost.thumble}`}
+                    src={`${state.port}/Images/${featureFourPost.thumble}`}
                   />
                 </Link>
                 <div className="gap-1">
@@ -394,7 +396,7 @@ const SecondPart = () => {
                     data-nimg="1"
                     className="w-full h-auto mb-2"
                     style={{ color: "transparent" }}
-                    src={`http://localhost:8080/Images/${featureFivePost.thumble}`}
+                    src={`${state.port}/Images/${featureFivePost.thumble}`}
                   />
                 </Link>
                 <div className="gap-1">

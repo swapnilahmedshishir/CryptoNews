@@ -2,8 +2,12 @@ import { useEffect, useState, useMemo } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../../AppContext";
 
 const ArticleCard = ({ BlogData }) => {
+  const { state } = useContext(AppContext);
+
   // Destructure props
   const {
     thumble,
@@ -26,8 +30,8 @@ const ArticleCard = ({ BlogData }) => {
     const fetchAuthorsAndCategories = async () => {
       try {
         const [authorResponse, categoryResponse] = await Promise.all([
-          axios.get("http://localhost:8080/api/admin/author"),
-          axios.get("http://localhost:8080/api/admin/newsCategory"),
+          axios.get(`${state.port}/api/admin/author`),
+          axios.get(`${state.port}/api/admin/newsCategory`),
         ]);
 
         if (authorResponse.data.Status && categoryResponse.data.Status) {
@@ -92,7 +96,7 @@ const ArticleCard = ({ BlogData }) => {
           decoding="async"
           data-nimg="1"
           className="w-full h-auto"
-          src={`http://localhost:8080/Images/${thumble}`}
+          src={`${state.port}/Images/${thumble}`}
           alt={thumble}
           style={{ color: "transparent" }}
         />

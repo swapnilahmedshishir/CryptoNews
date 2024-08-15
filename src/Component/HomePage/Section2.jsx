@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaArrowRightLong, FaSpinner } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ArticalCard from "../Artical/ArticalCard";
+import { AppContext } from "../../AppContext";
 
 const Section2 = () => {
+  const { state } = useContext(AppContext);
   // state
   const [displayText, setDisplayText] = useState(3);
   const [articles, setArticles] = useState([]);
@@ -18,7 +20,7 @@ const Section2 = () => {
     const fetchAuthorsAndCategories = async () => {
       try {
         const [categoryResponse] = await Promise.all([
-          axios.get("http://localhost:8080/api/admin/newsCategory"),
+          axios.get(`${state.port}/api/admin/newsCategory`),
         ]);
 
         if (categoryResponse.data.Status) {
@@ -37,7 +39,7 @@ const Section2 = () => {
   // Fetch blog posts
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/admin/blogpost")
+      .get(`${state.port}/api/admin/blogpost`)
       .then((result) => {
         if (result.data.Status) {
           setBlogposts(result.data.Result);

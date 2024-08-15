@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../../AppContext";
 
 const EmailNewsletter = () => {
+  const { state } = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
   const [SuccessMessage, setSuccessMessage] = useState(null);
@@ -9,7 +11,7 @@ const EmailNewsletter = () => {
     event.preventDefault();
 
     const response = await fetch(
-      "http://localhost:8080/api/admin/newsletteremail/submite",
+      `${state.port}/api/admin/newsletteremail/submite`,
       {
         method: "POST",
         headers: {

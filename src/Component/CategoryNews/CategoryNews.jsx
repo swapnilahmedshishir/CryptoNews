@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ArticleCard from "../Artical/ArticalCard";
 import Newsletter from "./../Newsletter/Newsletter";
 import { Link, useParams } from "react-router-dom";
+import { AppContext } from "../../AppContext";
 
 const CategoryNews = () => {
   const { categoryName } = useParams();
+  const { state } = useContext(AppContext);
 
   const [blogposts, setBlogposts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -17,7 +19,7 @@ const CategoryNews = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/admin/newsCategory"
+          `${state.port}/api/admin/newsCategory`
         );
         if (response.data.Status) {
           setCategories(response.data.Result);
@@ -44,9 +46,7 @@ const CategoryNews = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/api/admin/blogpost"
-        );
+        const response = await axios.get(`${state.port}/api/admin/blogpost`);
         if (response.data.Status) {
           setBlogposts(response.data.Result);
         } else {
@@ -104,7 +104,7 @@ const CategoryNews = () => {
           </ol>
         </nav>
         <div>
-          <h1 className="self-stretch flex-grow-0 flex-shrink-0 w-full text-5xl font-semibold text-left text-[#110b29] capitalize py-4 text-center">
+          <h1 className="self-stretch flex-grow-0 flex-shrink-0 w-full text-5xl font-semibold text-[#110b29] capitalize py-4 text-center">
             {categoryName}
           </h1>
           <p className="self-stretch flex-grow-0 flex-shrink-0 w-full text-xl text-left text-[#110b29]">

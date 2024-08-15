@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NewsNav from "../../Navbars/NewsNav";
 import axios from "axios";
+import { AppContext } from "../../../AppContext";
 
 const FristPart = () => {
+  const { state } = useContext(AppContext);
   // state
   const [errorMessage, setErrorMessage] = useState(null);
   const [blogpost, setBlogpost] = useState([]);
@@ -11,7 +13,7 @@ const FristPart = () => {
   // fetch data
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/admin/blogpost")
+      .get(`${state.port}/api/admin/blogpost`)
       .then((result) => {
         if (result.data.Status) {
           const posts = result.data.Result;

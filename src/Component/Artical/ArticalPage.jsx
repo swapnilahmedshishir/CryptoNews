@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Section2 from "../HomePage/Section2";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
@@ -6,8 +6,10 @@ import SocialShare from "./SocialShare";
 import DOMPurify from "dompurify";
 import ArLeftSide from "./ArLeftSide";
 import { IoIosArrowBack } from "react-icons/io";
+import { AppContext } from "../../AppContext";
 
 const ArticalPage = () => {
+  const { state } = useContext(AppContext);
   const { title } = useParams();
   const [errorMessage, setErrorMessage] = useState(null);
   const [blogpost, setBlogpost] = useState([]);
@@ -20,8 +22,8 @@ const ArticalPage = () => {
     const fetchAuthorsAndCategories = async () => {
       try {
         const [authorResponse, categoryResponse] = await Promise.all([
-          axios.get("http://localhost:8080/api/admin/author"),
-          axios.get("http://localhost:8080/api/admin/newsCategory"),
+          axios.get(`${state.port}/api/admin/author`),
+          axios.get(`${state.port}/api/admin/newsCategory`),
         ]);
 
         if (authorResponse.data.Status && categoryResponse.data.Status) {
@@ -40,7 +42,7 @@ const ArticalPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/admin/blogpost")
+      .get(`${state.port}/api/admin/blogpost`)
       .then((result) => {
         if (result.data.Status) {
           const posts = result.data.Result;
@@ -164,7 +166,7 @@ const ArticalPage = () => {
                 className="object-cover w-full"
                 sizes="100%"
                 loading="lazy"
-                src={`http://localhost:8080/Images/${Image}`}
+                src={`${state.port}/Images/${Image}`}
                 alt={Image}
                 style={{ color: "transparent" }}
               />

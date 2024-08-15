@@ -1,9 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AppContext } from "../../AppContext";
 
 const NavMenuItems = () => {
+  const { state } = useContext(AppContext);
   //state
   const [categories, setCategories] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -13,7 +15,7 @@ const NavMenuItems = () => {
     const fetchAuthorsAndCategories = async () => {
       try {
         const [categoryResponse] = await Promise.all([
-          axios.get("http://localhost:8080/api/admin/newsCategory"),
+          axios.get(`${state.port}/api/admin/newsCategory`),
         ]);
 
         if (categoryResponse.data.Status) {
