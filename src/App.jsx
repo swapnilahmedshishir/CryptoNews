@@ -20,13 +20,14 @@ import { Audio } from "./Component/Audio/Audio";
 import Episodes from "./Component/Episodes/Episodes";
 import EpisodeItem from "./Component/Episodes/EpisodeItem";
 import { AppProvider } from "./AppContext";
+import ScrollToTop from "./Component/SmallComponent/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
     <div className="2xl:mx-6 border-x-2 border-gray-100 ">
       <AppProvider>
         <Router>
-          {/* <ScrollToTop /> */}
+          <ScrollToTop />
           <Navbars />
 
           <HeaderScroll />

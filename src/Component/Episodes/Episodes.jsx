@@ -131,7 +131,6 @@ const Episodes = () => {
                         data-nimg="1"
                         className="w-full"
                         sizes="(min-width: 1024px) 20rem, (min-width: 640px) 16rem, 12rem"
-                        srcSet=""
                         src={`${state.port}/Images/${filteredPodcast.image}`}
                       />
                     </div>

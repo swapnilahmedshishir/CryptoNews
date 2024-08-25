@@ -179,7 +179,7 @@ const Footer = () => {
               <FaLinkedin className="flex-grow-0 flex-shrink-0 text-[1.9rem] sm:text-[2.5rem] relative hover:text-[#0A66C2]" />
             </a>
             <a
-              href="https://t.me/blockworks_news"
+              href="https://t.me/tojo-news"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Telegram"
@@ -219,7 +219,7 @@ const Footer = () => {
               <FaTiktok className="flex-grow-0 flex-shrink-0 text-[1.9rem] sm:text-[2.5rem] relative hover:text-[#69c9d0]" />
             </a>
             <a
-              href="https://www.youtube.com/channel/"
+              href="https://www.youtube.com/channel/@tojonews"
               target="_blank"
               rel="noreferrer nofollow"
               aria-label="Youtube Channel"

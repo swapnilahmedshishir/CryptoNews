@@ -6,7 +6,7 @@ export const AppContext = createContext();
 
 // Create a provider component
 export const AppProvider = ({ children }) => {
-  const [state] = useState({ port: "http://localhost:8080" });
+  const [state] = useState({ port: "https://api.tojonews.com" });
   const [audioFile, setAudioFile] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentEpisodeId, setCurrentEpisodeId] = useState(null);
